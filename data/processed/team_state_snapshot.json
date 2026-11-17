@@ -1,0 +1,3507 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-05-30",
+  "source_rows": 1497,
+  "teams": {
+    "aek athen": {
+      "played": 6,
+      "points": 0.0,
+      "goals_for": 2.0,
+      "goals_against": 13.0,
+      "wins": 0.0,
+      "draws": 0.0,
+      "home_played": 3,
+      "home_points": 0.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1438.8503202675847,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "ajax": {
+      "played": 46,
+      "points": 70.0,
+      "goals_for": 82.0,
+      "goals_against": 71.0,
+      "wins": 21.0,
+      "draws": 7.0,
+      "home_played": 23,
+      "home_points": 26.0,
+      "away_played": 23,
+      "away_points": 44.0,
+      "elo_rating": 1508.7398736808034,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "apoel nikosia": {
+      "played": 6,
+      "points": 2.0,
+      "goals_for": 2.0,
+      "goals_against": 17.0,
+      "wins": 0.0,
+      "draws": 2.0,
+      "home_played": 3,
+      "home_points": 1.0,
+      "away_played": 3,
+      "away_points": 1.0,
+      "elo_rating": 1464.506977640656,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -6.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "arsenal": {
+      "played": 55,
+      "points": 106.0,
+      "goals_for": 113.0,
+      "goals_against": 56.0,
+      "wins": 32.0,
+      "draws": 10.0,
+      "home_played": 27,
+      "home_points": 61.0,
+      "away_played": 28,
+      "away_points": 45.0,
+      "elo_rating": 1693.8461128177655,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "astana": {
+      "played": 6,
+      "points": 4.0,
+      "goals_for": 5.0,
+      "goals_against": 11.0,
+      "wins": 0.0,
+      "draws": 4.0,
+      "home_played": 3,
+      "home_points": 3.0,
+      "away_played": 3,
+      "away_points": 1.0,
+      "elo_rating": 1478.9828522562216,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "aston villa": {
+      "played": 12,
+      "points": 25.0,
+      "goals_for": 23.0,
+      "goals_against": 12.0,
+      "wins": 8.0,
+      "draws": 1.0,
+      "home_played": 6,
+      "home_points": 16.0,
+      "away_played": 6,
+      "away_points": 9.0,
+      "elo_rating": 1561.4611020533407,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "atalanta": {
+      "played": 45,
+      "points": 61.0,
+      "goals_for": 78.0,
+      "goals_against": 77.0,
+      "wins": 17.0,
+      "draws": 10.0,
+      "home_played": 23,
+      "home_points": 28.0,
+      "away_played": 22,
+      "away_points": 33.0,
+      "elo_rating": 1518.7414440839314,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "athletic": {
+      "played": 8,
+      "points": 8.0,
+      "goals_for": 9.0,
+      "goals_against": 14.0,
+      "wins": 2.0,
+      "draws": 2.0,
+      "home_played": 4,
+      "home_points": 4.0,
+      "away_played": 4,
+      "away_points": 4.0,
+      "elo_rating": 1492.0920611129543,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "atletico madrid": {
+      "played": 108,
+      "points": 175.0,
+      "goals_for": 159.0,
+      "goals_against": 123.0,
+      "wins": 50.0,
+      "draws": 25.0,
+      "home_played": 53,
+      "home_points": 111.0,
+      "away_played": 55,
+      "away_points": 64.0,
+      "elo_rating": 1603.0157633116046,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "barcelona": {
+      "played": 107,
+      "points": 209.0,
+      "goals_for": 233.0,
+      "goals_against": 139.0,
+      "wins": 63.0,
+      "draws": 20.0,
+      "home_played": 54,
+      "home_points": 124.0,
+      "away_played": 53,
+      "away_points": 85.0,
+      "elo_rating": 1663.3867971042127,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "basel": {
+      "played": 14,
+      "points": 17.0,
+      "goals_for": 16.0,
+      "goals_against": 22.0,
+      "wins": 5.0,
+      "draws": 2.0,
+      "home_played": 7,
+      "home_points": 7.0,
+      "away_played": 7,
+      "away_points": 10.0,
+      "elo_rating": 1491.9060828374363,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "bate borisov": {
+      "played": 6,
+      "points": 5.0,
+      "goals_for": 5.0,
+      "goals_against": 12.0,
+      "wins": 1.0,
+      "draws": 2.0,
+      "home_played": 3,
+      "home_points": 4.0,
+      "away_played": 3,
+      "away_points": 1.0,
+      "elo_rating": 1478.7751604713808,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "bayer leverkusen": {
+      "played": 48,
+      "points": 61.0,
+      "goals_for": 63.0,
+      "goals_against": 66.0,
+      "wins": 15.0,
+      "draws": 16.0,
+      "home_played": 24,
+      "home_points": 36.0,
+      "away_played": 24,
+      "away_points": 25.0,
+      "elo_rating": 1528.9602114822178,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "bayern munchen": {
+      "played": 123,
+      "points": 276.0,
+      "goals_for": 315.0,
+      "goals_against": 124.0,
+      "wins": 86.0,
+      "draws": 18.0,
+      "home_played": 60,
+      "home_points": 147.0,
+      "away_played": 63,
+      "away_points": 129.0,
+      "elo_rating": 1765.6809820090161,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "benfica": {
+      "played": 84,
+      "points": 106.0,
+      "goals_for": 122.0,
+      "goals_against": 137.0,
+      "wins": 30.0,
+      "draws": 16.0,
+      "home_played": 42,
+      "home_points": 56.0,
+      "away_played": 42,
+      "away_points": 50.0,
+      "elo_rating": 1509.7500741163662,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "besiktas": {
+      "played": 20,
+      "points": 21.0,
+      "goals_for": 24.0,
+      "goals_against": 46.0,
+      "wins": 5.0,
+      "draws": 6.0,
+      "home_played": 10,
+      "home_points": 8.0,
+      "away_played": 10,
+      "away_points": 13.0,
+      "elo_rating": 1459.4381294039908,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        }
+      ]
+    },
+    "bod glimt": {
+      "played": 12,
+      "points": 18.0,
+      "goals_for": 22.0,
+      "goals_against": 20.0,
+      "wins": 5.0,
+      "draws": 3.0,
+      "home_played": 6,
+      "home_points": 10.0,
+      "away_played": 6,
+      "away_points": 8.0,
+      "elo_rating": 1537.049176391494,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "bologna": {
+      "played": 8,
+      "points": 6.0,
+      "goals_for": 4.0,
+      "goals_against": 9.0,
+      "wins": 1.0,
+      "draws": 3.0,
+      "home_played": 4,
+      "home_points": 4.0,
+      "away_played": 4,
+      "away_points": 2.0,
+      "elo_rating": 1477.563949979955,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "borussia dortmund": {
+      "played": 93,
+      "points": 147.0,
+      "goals_for": 165.0,
+      "goals_against": 128.0,
+      "wins": 43.0,
+      "draws": 18.0,
+      "home_played": 47,
+      "home_points": 88.0,
+      "away_played": 46,
+      "away_points": 59.0,
+      "elo_rating": 1593.609732769442,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "borussia monchengladbach": {
+      "played": 20,
+      "points": 18.0,
+      "goals_for": 29.0,
+      "goals_against": 37.0,
+      "wins": 4.0,
+      "draws": 6.0,
+      "home_played": 10,
+      "home_points": 10.0,
+      "away_played": 10,
+      "away_points": 8.0,
+      "elo_rating": 1463.8184234989674,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "brugge kv": {
+      "played": 60,
+      "points": 60.0,
+      "goals_for": 66.0,
+      "goals_against": 115.0,
+      "wins": 15.0,
+      "draws": 15.0,
+      "home_played": 30,
+      "home_points": 32.0,
+      "away_played": 30,
+      "away_points": 28.0,
+      "elo_rating": 1483.170953000517,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "celtic": {
+      "played": 34,
+      "points": 25.0,
+      "goals_for": 34.0,
+      "goals_against": 81.0,
+      "wins": 5.0,
+      "draws": 10.0,
+      "home_played": 17,
+      "home_points": 16.0,
+      "away_played": 17,
+      "away_points": 9.0,
+      "elo_rating": 1434.6619690600633,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "chelsea": {
+      "played": 67,
+      "points": 120.0,
+      "goals_for": 119.0,
+      "goals_against": 75.0,
+      "wins": 36.0,
+      "draws": 12.0,
+      "home_played": 33,
+      "home_points": 64.0,
+      "away_played": 34,
+      "away_points": 56.0,
+      "elo_rating": 1625.75507062815,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "crvena zvezda": {
+      "played": 26,
+      "points": 14.0,
+      "goals_for": 28.0,
+      "goals_against": 74.0,
+      "wins": 4.0,
+      "draws": 2.0,
+      "home_played": 13,
+      "home_points": 11.0,
+      "away_played": 13,
+      "away_points": 3.0,
+      "elo_rating": 1391.4639755751068,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "cska moskva": {
+      "played": 24,
+      "points": 23.0,
+      "goals_for": 26.0,
+      "goals_against": 39.0,
+      "wins": 6.0,
+      "draws": 5.0,
+      "home_played": 12,
+      "home_points": 12.0,
+      "away_played": 12,
+      "away_points": 11.0,
+      "elo_rating": 1456.0543845816724,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        }
+      ]
+    },
+    "dinamo kiev": {
+      "played": 26,
+      "points": 22.0,
+      "goals_for": 22.0,
+      "goals_against": 37.0,
+      "wins": 5.0,
+      "draws": 7.0,
+      "home_played": 13,
+      "home_points": 12.0,
+      "away_played": 13,
+      "away_points": 10.0,
+      "elo_rating": 1444.1452001132348,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "dinamo zagreb": {
+      "played": 32,
+      "points": 23.0,
+      "goals_for": 29.0,
+      "goals_against": 72.0,
+      "wins": 6.0,
+      "draws": 5.0,
+      "home_played": 16,
+      "home_points": 16.0,
+      "away_played": 16,
+      "away_points": 7.0,
+      "elo_rating": 1417.3815553828363,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "eintracht frankfurt": {
+      "played": 16,
+      "points": 14.0,
+      "goals_for": 17.0,
+      "goals_against": 34.0,
+      "wins": 4.0,
+      "draws": 2.0,
+      "home_played": 8,
+      "home_points": 7.0,
+      "away_played": 8,
+      "away_points": 7.0,
+      "elo_rating": 1452.2238400133756,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "ferencvarosi tc": {
+      "played": 6,
+      "points": 1.0,
+      "goals_for": 5.0,
+      "goals_against": 17.0,
+      "wins": 0.0,
+      "draws": 1.0,
+      "home_played": 3,
+      "home_points": 1.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1460.1230188061033,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "feyenoord": {
+      "played": 24,
+      "points": 26.0,
+      "goals_for": 35.0,
+      "goals_against": 50.0,
+      "wins": 8.0,
+      "draws": 2.0,
+      "home_played": 12,
+      "home_points": 18.0,
+      "away_played": 12,
+      "away_points": 8.0,
+      "elo_rating": 1476.3666358168493,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "galatasaray": {
+      "played": 36,
+      "points": 32.0,
+      "goals_for": 37.0,
+      "goals_against": 65.0,
+      "wins": 8.0,
+      "draws": 8.0,
+      "home_played": 18,
+      "home_points": 24.0,
+      "away_played": 18,
+      "away_points": 8.0,
+      "elo_rating": 1467.702140073054,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        }
+      ]
+    },
+    "girona": {
+      "played": 8,
+      "points": 3.0,
+      "goals_for": 5.0,
+      "goals_against": 13.0,
+      "wins": 1.0,
+      "draws": 0.0,
+      "home_played": 4,
+      "home_points": 3.0,
+      "away_played": 4,
+      "away_points": 0.0,
+      "elo_rating": 1443.2038722262755,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "hoffenheim": {
+      "played": 6,
+      "points": 3.0,
+      "goals_for": 11.0,
+      "goals_against": 14.0,
+      "wins": 0.0,
+      "draws": 3.0,
+      "home_played": 3,
+      "home_points": 1.0,
+      "away_played": 3,
+      "away_points": 2.0,
+      "elo_rating": 1466.4935717598166,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "inter": {
+      "played": 72,
+      "points": 121.0,
+      "goals_for": 104.0,
+      "goals_against": 78.0,
+      "wins": 35.0,
+      "draws": 16.0,
+      "home_played": 35,
+      "home_points": 65.0,
+      "away_played": 37,
+      "away_points": 56.0,
+      "elo_rating": 1634.9898322284103,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "istanbul basaksehir": {
+      "played": 6,
+      "points": 3.0,
+      "goals_for": 7.0,
+      "goals_against": 18.0,
+      "wins": 1.0,
+      "draws": 0.0,
+      "home_played": 3,
+      "home_points": 3.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1467.783508923575,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        }
+      ]
+    },
+    "juventus": {
+      "played": 91,
+      "points": 164.0,
+      "goals_for": 142.0,
+      "goals_against": 97.0,
+      "wins": 48.0,
+      "draws": 20.0,
+      "home_played": 46,
+      "home_points": 92.0,
+      "away_played": 45,
+      "away_points": 72.0,
+      "elo_rating": 1584.67924484944,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        }
+      ]
+    },
+    "k benhavn": {
+      "played": 28,
+      "points": 28.0,
+      "goals_for": 30.0,
+      "goals_against": 49.0,
+      "wins": 6.0,
+      "draws": 10.0,
+      "home_played": 14,
+      "home_points": 19.0,
+      "away_played": 14,
+      "away_points": 9.0,
+      "elo_rating": 1487.703191473956,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "kaa gent": {
+      "played": 8,
+      "points": 10.0,
+      "goals_for": 10.0,
+      "goals_against": 11.0,
+      "wins": 3.0,
+      "draws": 1.0,
+      "home_played": 4,
+      "home_points": 7.0,
+      "away_played": 4,
+      "away_points": 3.0,
+      "elo_rating": 1492.2862672225515,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "kairat": {
+      "played": 8,
+      "points": 1.0,
+      "goals_for": 7.0,
+      "goals_against": 22.0,
+      "wins": 0.0,
+      "draws": 1.0,
+      "home_played": 4,
+      "home_points": 1.0,
+      "away_played": 4,
+      "away_points": 0.0,
+      "elo_rating": 1433.226648580298,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "krasnodar": {
+      "played": 6,
+      "points": 5.0,
+      "goals_for": 6.0,
+      "goals_against": 11.0,
+      "wins": 1.0,
+      "draws": 2.0,
+      "home_played": 3,
+      "home_points": 3.0,
+      "away_played": 3,
+      "away_points": 2.0,
+      "elo_rating": 1483.5565623077819,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "krc genk": {
+      "played": 6,
+      "points": 1.0,
+      "goals_for": 5.0,
+      "goals_against": 20.0,
+      "wins": 0.0,
+      "draws": 1.0,
+      "home_played": 3,
+      "home_points": 1.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1451.8412485980534,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        }
+      ]
+    },
+    "lazio": {
+      "played": 16,
+      "points": 23.0,
+      "goals_for": 21.0,
+      "goals_against": 23.0,
+      "wins": 6.0,
+      "draws": 5.0,
+      "home_played": 8,
+      "home_points": 17.0,
+      "away_played": 8,
+      "away_points": 6.0,
+      "elo_rating": 1525.9450768784238,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "legia warszawa": {
+      "played": 6,
+      "points": 4.0,
+      "goals_for": 9.0,
+      "goals_against": 24.0,
+      "wins": 1.0,
+      "draws": 1.0,
+      "home_played": 3,
+      "home_points": 4.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1474.086734886826,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "leicester city": {
+      "played": 10,
+      "points": 17.0,
+      "goals_for": 11.0,
+      "goals_against": 10.0,
+      "wins": 5.0,
+      "draws": 2.0,
+      "home_played": 5,
+      "home_points": 13.0,
+      "away_played": 5,
+      "away_points": 4.0,
+      "elo_rating": 1521.8041874887015,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "lille osc": {
+      "played": 24,
+      "points": 29.0,
+      "goals_for": 31.0,
+      "goals_against": 35.0,
+      "wins": 8.0,
+      "draws": 5.0,
+      "home_played": 12,
+      "home_points": 16.0,
+      "away_played": 12,
+      "away_points": 13.0,
+      "elo_rating": 1518.8035721679757,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 5.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "liverpool": {
+      "played": 87,
+      "points": 177.0,
+      "goals_for": 185.0,
+      "goals_against": 88.0,
+      "wins": 56.0,
+      "draws": 9.0,
+      "home_played": 43,
+      "home_points": 96.0,
+      "away_played": 44,
+      "away_points": 81.0,
+      "elo_rating": 1674.460176767942,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 6.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "lokomotiv moskva": {
+      "played": 18,
+      "points": 9.0,
+      "goals_for": 13.0,
+      "goals_against": 33.0,
+      "wins": 2.0,
+      "draws": 3.0,
+      "home_played": 9,
+      "home_points": 4.0,
+      "away_played": 9,
+      "away_points": 5.0,
+      "elo_rating": 1423.4691336710382,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "maccabi haifa": {
+      "played": 6,
+      "points": 3.0,
+      "goals_for": 7.0,
+      "goals_against": 21.0,
+      "wins": 1.0,
+      "draws": 0.0,
+      "home_played": 3,
+      "home_points": 3.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1473.7981110653086,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        }
+      ]
+    },
+    "maccabi tel aviv": {
+      "played": 6,
+      "points": 0.0,
+      "goals_for": 1.0,
+      "goals_against": 16.0,
+      "wins": 0.0,
+      "draws": 0.0,
+      "home_played": 3,
+      "home_points": 0.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1435.5004747951853,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "malmo": {
+      "played": 12,
+      "points": 4.0,
+      "goals_for": 2.0,
+      "goals_against": 35.0,
+      "wins": 1.0,
+      "draws": 1.0,
+      "home_played": 6,
+      "home_points": 4.0,
+      "away_played": 6,
+      "away_points": 0.0,
+      "elo_rating": 1420.3961851131075,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "manchester city": {
+      "played": 117,
+      "points": 232.0,
+      "goals_for": 258.0,
+      "goals_against": 133.0,
+      "wins": 70.0,
+      "draws": 22.0,
+      "home_played": 60,
+      "home_points": 137.0,
+      "away_played": 57,
+      "away_points": 95.0,
+      "elo_rating": 1671.5823576163634,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "manchester united": {
+      "played": 44,
+      "points": 62.0,
+      "goals_for": 69.0,
+      "goals_against": 58.0,
+      "wins": 18.0,
+      "draws": 8.0,
+      "home_played": 22,
+      "home_points": 36.0,
+      "away_played": 22,
+      "away_points": 26.0,
+      "elo_rating": 1502.7720132661364,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "midtjylland": {
+      "played": 6,
+      "points": 2.0,
+      "goals_for": 4.0,
+      "goals_against": 13.0,
+      "wins": 0.0,
+      "draws": 2.0,
+      "home_played": 3,
+      "home_points": 1.0,
+      "away_played": 3,
+      "away_points": 1.0,
+      "elo_rating": 1469.8064341904605,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "milan": {
+      "played": 34,
+      "points": 46.0,
+      "goals_for": 41.0,
+      "goals_against": 41.0,
+      "wins": 13.0,
+      "draws": 7.0,
+      "home_played": 17,
+      "home_points": 27.0,
+      "away_played": 17,
+      "away_points": 19.0,
+      "elo_rating": 1526.1365350637016,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "monaco": {
+      "played": 44,
+      "points": 48.0,
+      "goals_for": 58.0,
+      "goals_against": 86.0,
+      "wins": 12.0,
+      "draws": 12.0,
+      "home_played": 22,
+      "home_points": 28.0,
+      "away_played": 22,
+      "away_points": 20.0,
+      "elo_rating": 1474.9144912746153,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "napoli": {
+      "played": 54,
+      "points": 80.0,
+      "goals_for": 91.0,
+      "goals_against": 74.0,
+      "wins": 22.0,
+      "draws": 14.0,
+      "home_played": 27,
+      "home_points": 50.0,
+      "away_played": 27,
+      "away_points": 30.0,
+      "elo_rating": 1549.8752530020706,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "newcastle united": {
+      "played": 18,
+      "points": 26.0,
+      "goals_for": 35.0,
+      "goals_against": 25.0,
+      "wins": 7.0,
+      "draws": 5.0,
+      "home_played": 9,
+      "home_points": 16.0,
+      "away_played": 9,
+      "away_points": 10.0,
+      "elo_rating": 1538.0345393873283,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 5.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        }
+      ]
+    },
+    "nk maribor": {
+      "played": 6,
+      "points": 3.0,
+      "goals_for": 3.0,
+      "goals_against": 16.0,
+      "wins": 0.0,
+      "draws": 3.0,
+      "home_played": 3,
+      "home_points": 2.0,
+      "away_played": 3,
+      "away_points": 1.0,
+      "elo_rating": 1468.413092846464,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -7.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "olympiakos": {
+      "played": 34,
+      "points": 29.0,
+      "goals_for": 30.0,
+      "goals_against": 66.0,
+      "wins": 8.0,
+      "draws": 5.0,
+      "home_played": 17,
+      "home_points": 16.0,
+      "away_played": 17,
+      "away_points": 13.0,
+      "elo_rating": 1442.7713953509733,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "olympique lyonnais": {
+      "played": 30,
+      "points": 35.0,
+      "goals_for": 37.0,
+      "goals_against": 42.0,
+      "wins": 8.0,
+      "draws": 11.0,
+      "home_played": 15,
+      "home_points": 16.0,
+      "away_played": 15,
+      "away_points": 19.0,
+      "elo_rating": 1504.3221837163312,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "olympique marseille": {
+      "played": 20,
+      "points": 18.0,
+      "goals_for": 21.0,
+      "goals_against": 35.0,
+      "wins": 6.0,
+      "draws": 0.0,
+      "home_played": 10,
+      "home_points": 12.0,
+      "away_played": 10,
+      "away_points": 6.0,
+      "elo_rating": 1450.605820239813,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "paphos": {
+      "played": 8,
+      "points": 9.0,
+      "goals_for": 8.0,
+      "goals_against": 11.0,
+      "wins": 2.0,
+      "draws": 3.0,
+      "home_played": 4,
+      "home_points": 7.0,
+      "away_played": 4,
+      "away_points": 2.0,
+      "elo_rating": 1496.8118849520904,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        }
+      ]
+    },
+    "paris saint germain": {
+      "played": 119,
+      "points": 222.0,
+      "goals_for": 263.0,
+      "goals_against": 135.0,
+      "wins": 67.0,
+      "draws": 21.0,
+      "home_played": 60,
+      "home_points": 120.0,
+      "away_played": 59,
+      "away_points": 102.0,
+      "elo_rating": 1721.4185247532853,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "pfc ludogorets razgrad": {
+      "played": 6,
+      "points": 3.0,
+      "goals_for": 6.0,
+      "goals_against": 15.0,
+      "wins": 0.0,
+      "draws": 3.0,
+      "home_played": 3,
+      "home_points": 1.0,
+      "away_played": 3,
+      "away_points": 2.0,
+      "elo_rating": 1469.7744885623947,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -6.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "porto": {
+      "played": 64,
+      "points": 103.0,
+      "goals_for": 98.0,
+      "goals_against": 80.0,
+      "wins": 31.0,
+      "draws": 10.0,
+      "home_played": 32,
+      "home_points": 60.0,
+      "away_played": 32,
+      "away_points": 43.0,
+      "elo_rating": 1566.951514684391,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "psv": {
+      "played": 48,
+      "points": 52.0,
+      "goals_for": 66.0,
+      "goals_against": 84.0,
+      "wins": 12.0,
+      "draws": 16.0,
+      "home_played": 24,
+      "home_points": 34.0,
+      "away_played": 24,
+      "away_points": 18.0,
+      "elo_rating": 1496.0756919006828,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "qarabag": {
+      "played": 16,
+      "points": 12.0,
+      "goals_for": 18.0,
+      "goals_against": 44.0,
+      "wins": 3.0,
+      "draws": 3.0,
+      "home_played": 8,
+      "home_points": 8.0,
+      "away_played": 8,
+      "away_points": 4.0,
+      "elo_rating": 1447.3671750237518,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -6.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "racing lens": {
+      "played": 6,
+      "points": 8.0,
+      "goals_for": 6.0,
+      "goals_against": 11.0,
+      "wins": 2.0,
+      "draws": 2.0,
+      "home_played": 3,
+      "home_points": 7.0,
+      "away_played": 3,
+      "away_points": 1.0,
+      "elo_rating": 1496.5081199231747,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -6.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "rangers": {
+      "played": 6,
+      "points": 0.0,
+      "goals_for": 2.0,
+      "goals_against": 22.0,
+      "wins": 0.0,
+      "draws": 0.0,
+      "home_played": 3,
+      "home_points": 0.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1451.444270119811,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -6.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "rb leipzig": {
+      "played": 54,
+      "points": 75.0,
+      "goals_for": 88.0,
+      "goals_against": 97.0,
+      "wins": 23.0,
+      "draws": 6.0,
+      "home_played": 28,
+      "home_points": 43.0,
+      "away_played": 26,
+      "away_points": 32.0,
+      "elo_rating": 1507.8782842451674,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "real madrid": {
+      "played": 133,
+      "points": 268.0,
+      "goals_for": 287.0,
+      "goals_against": 160.0,
+      "wins": 83.0,
+      "draws": 19.0,
+      "home_played": 66,
+      "home_points": 142.0,
+      "away_played": 67,
+      "away_points": 126.0,
+      "elo_rating": 1712.4331835216979,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "real sociedad": {
+      "played": 8,
+      "points": 12.0,
+      "goals_for": 8.0,
+      "goals_against": 6.0,
+      "wins": 3.0,
+      "draws": 3.0,
+      "home_played": 4,
+      "home_points": 5.0,
+      "away_played": 4,
+      "away_points": 7.0,
+      "elo_rating": 1522.7502781653366,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "roma": {
+      "played": 28,
+      "points": 38.0,
+      "goals_for": 46.0,
+      "goals_against": 50.0,
+      "wins": 11.0,
+      "draws": 5.0,
+      "home_played": 14,
+      "home_points": 30.0,
+      "away_played": 14,
+      "away_points": 8.0,
+      "elo_rating": 1520.7105604081717,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "rostov": {
+      "played": 6,
+      "points": 5.0,
+      "goals_for": 6.0,
+      "goals_against": 12.0,
+      "wins": 1.0,
+      "draws": 2.0,
+      "home_played": 3,
+      "home_points": 4.0,
+      "away_played": 3,
+      "away_points": 1.0,
+      "elo_rating": 1486.477650434213,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "royal antwerp": {
+      "played": 6,
+      "points": 3.0,
+      "goals_for": 6.0,
+      "goals_against": 17.0,
+      "wins": 1.0,
+      "draws": 0.0,
+      "home_played": 3,
+      "home_points": 3.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1466.1412278156272,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "royale union saint gilloise": {
+      "played": 8,
+      "points": 9.0,
+      "goals_for": 8.0,
+      "goals_against": 17.0,
+      "wins": 3.0,
+      "draws": 0.0,
+      "home_played": 4,
+      "home_points": 3.0,
+      "away_played": 4,
+      "away_points": 6.0,
+      "elo_rating": 1490.9710444954308,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "rsc anderlecht": {
+      "played": 6,
+      "points": 3.0,
+      "goals_for": 2.0,
+      "goals_against": 17.0,
+      "wins": 1.0,
+      "draws": 0.0,
+      "home_played": 3,
+      "home_points": 0.0,
+      "away_played": 3,
+      "away_points": 3.0,
+      "elo_rating": 1466.5118063167597,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "salzburg": {
+      "played": 40,
+      "points": 35.0,
+      "goals_for": 50.0,
+      "goals_against": 88.0,
+      "wins": 9.0,
+      "draws": 8.0,
+      "home_played": 20,
+      "home_points": 18.0,
+      "away_played": 20,
+      "away_points": 17.0,
+      "elo_rating": 1414.2232818103012,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "schalke": {
+      "played": 8,
+      "points": 11.0,
+      "goals_for": 8.0,
+      "goals_against": 14.0,
+      "wins": 3.0,
+      "draws": 2.0,
+      "home_played": 4,
+      "home_points": 7.0,
+      "away_played": 4,
+      "away_points": 4.0,
+      "elo_rating": 1500.706003778512,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -7.0
+        }
+      ]
+    },
+    "sevilla": {
+      "played": 50,
+      "points": 61.0,
+      "goals_for": 63.0,
+      "goals_against": 74.0,
+      "wins": 15.0,
+      "draws": 16.0,
+      "home_played": 25,
+      "home_points": 37.0,
+      "away_played": 25,
+      "away_points": 24.0,
+      "elo_rating": 1457.669045106483,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "shakhtar donetsk": {
+      "played": 58,
+      "points": 62.0,
+      "goals_for": 67.0,
+      "goals_against": 116.0,
+      "wins": 16.0,
+      "draws": 14.0,
+      "home_played": 29,
+      "home_points": 38.0,
+      "away_played": 29,
+      "away_points": 24.0,
+      "elo_rating": 1456.4778062053574,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "sheriff": {
+      "played": 6,
+      "points": 7.0,
+      "goals_for": 7.0,
+      "goals_against": 11.0,
+      "wins": 2.0,
+      "draws": 1.0,
+      "home_played": 3,
+      "home_points": 3.0,
+      "away_played": 3,
+      "away_points": 4.0,
+      "elo_rating": 1492.4322633994718,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "slavia praha": {
+      "played": 14,
+      "points": 5.0,
+      "goals_for": 9.0,
+      "goals_against": 29.0,
+      "wins": 0.0,
+      "draws": 5.0,
+      "home_played": 7,
+      "home_points": 2.0,
+      "away_played": 7,
+      "away_points": 3.0,
+      "elo_rating": 1430.9631729649925,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "slovan bratislava": {
+      "played": 8,
+      "points": 0.0,
+      "goals_for": 7.0,
+      "goals_against": 27.0,
+      "wins": 0.0,
+      "draws": 0.0,
+      "home_played": 4,
+      "home_points": 0.0,
+      "away_played": 4,
+      "away_points": 0.0,
+      "elo_rating": 1422.5852000211653,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "sparta praha": {
+      "played": 8,
+      "points": 4.0,
+      "goals_for": 7.0,
+      "goals_against": 21.0,
+      "wins": 1.0,
+      "draws": 1.0,
+      "home_played": 4,
+      "home_points": 3.0,
+      "away_played": 4,
+      "away_points": 1.0,
+      "elo_rating": 1453.7436992289256,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -6.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "spartak moskva": {
+      "played": 6,
+      "points": 6.0,
+      "goals_for": 9.0,
+      "goals_against": 13.0,
+      "wins": 1.0,
+      "draws": 3.0,
+      "home_played": 3,
+      "home_points": 5.0,
+      "away_played": 3,
+      "away_points": 1.0,
+      "elo_rating": 1487.8177669898207,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -7.0
+        }
+      ]
+    },
+    "sporting braga": {
+      "played": 6,
+      "points": 4.0,
+      "goals_for": 6.0,
+      "goals_against": 12.0,
+      "wins": 1.0,
+      "draws": 1.0,
+      "home_played": 3,
+      "home_points": 1.0,
+      "away_played": 3,
+      "away_points": 3.0,
+      "elo_rating": 1482.8851956891056,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "sporting portugal": {
+      "played": 48,
+      "points": 59.0,
+      "goals_for": 68.0,
+      "goals_against": 73.0,
+      "wins": 17.0,
+      "draws": 8.0,
+      "home_played": 24,
+      "home_points": 38.0,
+      "away_played": 24,
+      "away_points": 21.0,
+      "elo_rating": 1527.6543172222512,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    },
+    "stade brestois": {
+      "played": 10,
+      "points": 13.0,
+      "goals_for": 10.0,
+      "goals_against": 21.0,
+      "wins": 4.0,
+      "draws": 1.0,
+      "home_played": 5,
+      "home_points": 7.0,
+      "away_played": 5,
+      "away_points": 6.0,
+      "elo_rating": 1498.2458593992035,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -7.0
+        }
+      ]
+    },
+    "stade rennais": {
+      "played": 6,
+      "points": 1.0,
+      "goals_for": 3.0,
+      "goals_against": 11.0,
+      "wins": 0.0,
+      "draws": 1.0,
+      "home_played": 3,
+      "home_points": 1.0,
+      "away_played": 3,
+      "away_points": 0.0,
+      "elo_rating": 1447.779646531662,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "sturm graz": {
+      "played": 8,
+      "points": 6.0,
+      "goals_for": 5.0,
+      "goals_against": 14.0,
+      "wins": 2.0,
+      "draws": 0.0,
+      "home_played": 4,
+      "home_points": 6.0,
+      "away_played": 4,
+      "away_points": 0.0,
+      "elo_rating": 1462.0708932505684,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "tottenham hotspur": {
+      "played": 53,
+      "points": 86.0,
+      "goals_for": 92.0,
+      "goals_against": 72.0,
+      "wins": 25.0,
+      "draws": 11.0,
+      "home_played": 27,
+      "home_points": 53.0,
+      "away_played": 26,
+      "away_points": 33.0,
+      "elo_rating": 1577.2581728256118,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        }
+      ]
+    },
+    "union berlin": {
+      "played": 6,
+      "points": 2.0,
+      "goals_for": 6.0,
+      "goals_against": 10.0,
+      "wins": 0.0,
+      "draws": 2.0,
+      "home_played": 3,
+      "home_points": 0.0,
+      "away_played": 3,
+      "away_points": 2.0,
+      "elo_rating": 1473.5583982552462,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "valencia": {
+      "played": 20,
+      "points": 25.0,
+      "goals_for": 24.0,
+      "goals_against": 30.0,
+      "wins": 7.0,
+      "draws": 4.0,
+      "home_played": 10,
+      "home_points": 13.0,
+      "away_played": 10,
+      "away_points": 12.0,
+      "elo_rating": 1494.266817982591,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 3.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "vfb stuttgart": {
+      "played": 8,
+      "points": 10.0,
+      "goals_for": 13.0,
+      "goals_against": 17.0,
+      "wins": 3.0,
+      "draws": 1.0,
+      "home_played": 4,
+      "home_points": 4.0,
+      "away_played": 4,
+      "away_points": 6.0,
+      "elo_rating": 1493.6582090763122,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 4.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "viktoria plzen": {
+      "played": 12,
+      "points": 7.0,
+      "goals_for": 12.0,
+      "goals_against": 40.0,
+      "wins": 2.0,
+      "draws": 1.0,
+      "home_played": 6,
+      "home_points": 4.0,
+      "away_played": 6,
+      "away_points": 3.0,
+      "elo_rating": 1455.1122417186934,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "villarreal": {
+      "played": 20,
+      "points": 19.0,
+      "goals_for": 25.0,
+      "goals_against": 34.0,
+      "wins": 5.0,
+      "draws": 4.0,
+      "home_played": 10,
+      "home_points": 9.0,
+      "away_played": 10,
+      "away_points": 10.0,
+      "elo_rating": 1470.4987213843322,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -3.0
+        }
+      ]
+    },
+    "wolfsburg": {
+      "played": 16,
+      "points": 26.0,
+      "goals_for": 20.0,
+      "goals_against": 21.0,
+      "wins": 8.0,
+      "draws": 2.0,
+      "home_played": 8,
+      "home_points": 19.0,
+      "away_played": 8,
+      "away_points": 7.0,
+      "elo_rating": 1513.1199033465564,
+      "recent_results": [
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 3.0,
+          "goal_difference": 1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        }
+      ]
+    },
+    "young boys": {
+      "played": 26,
+      "points": 13.0,
+      "goals_for": 21.0,
+      "goals_against": 61.0,
+      "wins": 3.0,
+      "draws": 4.0,
+      "home_played": 13,
+      "home_points": 11.0,
+      "away_played": 13,
+      "away_points": 2.0,
+      "elo_rating": 1373.1141962916167,
+      "recent_results": [
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -5.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        }
+      ]
+    },
+    "zenit st petersburg": {
+      "played": 26,
+      "points": 28.0,
+      "goals_for": 35.0,
+      "goals_against": 41.0,
+      "wins": 8.0,
+      "draws": 4.0,
+      "home_played": 13,
+      "home_points": 20.0,
+      "away_played": 13,
+      "away_points": 8.0,
+      "elo_rating": 1441.4477949000052,
+      "recent_results": [
+        {
+          "points": 3.0,
+          "goal_difference": 4.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -1.0
+        },
+        {
+          "points": 0.0,
+          "goal_difference": -2.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        },
+        {
+          "points": 1.0,
+          "goal_difference": 0.0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "project": {
+    "title": "UEFA Champions League Match Outcome Predictor",
+    "course": "ES 335 · IIT Gandhinagar",
+    "repository_url": "https://github.com/raghav-iit/ucl-predictor",
+    "references": [
+      {
+        "title": "OpenFootball Champions League dataset",
+        "url": "https://github.com/openfootball/champions-league"
+      },
+      {
+        "title": "Football.TXT specification",
+        "url": "https://openfootball.github.io/spec/"
+      },
+      {
+        "title": "scikit-learn Logistic Regression",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+      },
+      {
+        "title": "UEFA fixtures and results",
+        "url": "https://www.uefa.com/uefachampionsleague/fixtures-results/"
+      }
+    ]
+  },
+  "data_status": "historical_results_and_match_centre_available",
+  "export_note": "Research metrics are rounded from the saved backend evaluation export; historical match-centre predictions are loaded from historical_match_centre.json.",
+  "dataset": {
+    "row_count": 1497,
+    "season_range": "2015/16–2025/26",
+    "date_range": "2015-09-15 to 2026-05-30",
+    "source": "OpenFootball Champions League Football.TXT main competition season files; qualifying excluded",
+    "class_counts": {
+      "home_win": 706,
+      "draw": 298,
+      "away_win": 493
+    },
+    "class_percentages": {
+      "home_win": 47.2,
+      "draw": 19.9,
+      "away_win": 32.9
+    }
+  },
+  "preprocessing": {
+    "feature_names": [
+      "historical team performance",
+      "Elo difference",
+      "last-five-match form"
+    ],
+    "feature_descriptions": [
+      "Prior match counts; points, goals for/against, goal difference and win/draw rates; venue-specific history.",
+      "Model A plus home-minus-away Elo difference; initial rating 1500, K=24, fixed +60 home advantage.",
+      "Model B plus points and goal-difference per match over each team's latest up to five earlier UCL matches."
+    ],
+    "leakage_guards": [
+      "same-day feature rows use state at start of date",
+      "90-minute outcomes only",
+      "imputation/scaling fit on training data only"
+    ]
+  },
+  "evaluation": {
+    "split_description": "Chronological; common test matches; one validation and one final period, not repeated rolling-origin evaluation.",
+    "development_fit": {
+      "matches": 744,
+      "period": "2015/16–2020/21"
+    },
+    "validation": {
+      "matches": 250,
+      "period": "2021/22–2022/23"
+    },
+    "final_fit": {
+      "matches": 994,
+      "period": "2015/16–2022/23"
+    },
+    "test_period": {
+      "matches": 503,
+      "period": "2023/24–2025/26"
+    },
+    "metric_definitions": {
+      "log_loss": "Primary: penalizes low probability on the observed class.",
+      "brier_score": "Primary: average squared multiclass H/D/A probability error.",
+      "accuracy": "Secondary hard-label accuracy.",
+      "macro_f1": "Secondary unweighted mean class F1."
+    },
+    "selection_caveat": "C=0.003 selected using validation and applied consistently. Earlier C=1 final-test results had already been viewed; final test is not strictly pristine historically."
+  },
+  "models": [
+    {
+      "id": "BASELINE",
+      "name": "Training class frequencies",
+      "description": "Predict H/D/A frequencies calculated from the training period; majority class supplies the reference hard prediction."
+    },
+    {
+      "id": "A",
+      "name": "Team performance",
+      "description": "Cumulative UCL performance and venue-specific history."
+    },
+    {
+      "id": "B",
+      "name": "A + Elo",
+      "description": "Adds online Elo rating difference from prior 90-minute UCL results."
+    },
+    {
+      "id": "C",
+      "name": "B + recent form",
+      "description": "Adds up to five latest prior UCL matches: points and goal difference per match."
+    }
+  ],
+  "results": [
+    {
+      "period": "Validation",
+      "n": 250,
+      "model_id": "Baseline",
+      "log_loss": 1.0475,
+      "brier_score": 0.633,
+      "accuracy": 0.468,
+      "macro_f1": 0.2125
+    },
+    {
+      "period": "Validation",
+      "n": 250,
+      "model_id": "A",
+      "log_loss": 0.962,
+      "brier_score": 0.5685,
+      "accuracy": 0.552,
+      "macro_f1": 0.4071
+    },
+    {
+      "period": "Validation",
+      "n": 250,
+      "model_id": "B",
+      "log_loss": 0.9578,
+      "brier_score": 0.5661,
+      "accuracy": 0.56,
+      "macro_f1": 0.4128
+    },
+    {
+      "period": "Validation",
+      "n": 250,
+      "model_id": "C",
+      "log_loss": 0.9491,
+      "brier_score": 0.5599,
+      "accuracy": 0.564,
+      "macro_f1": 0.4153
+    },
+    {
+      "period": "Final test",
+      "n": 503,
+      "model_id": "Baseline",
+      "log_loss": 1.0217,
+      "brier_score": 0.6167,
+      "accuracy": 0.499,
+      "macro_f1": 0.2219
+    },
+    {
+      "period": "Final test",
+      "n": 503,
+      "model_id": "A",
+      "log_loss": 0.9308,
+      "brier_score": 0.5485,
+      "accuracy": 0.586,
+      "macro_f1": 0.4224
+    },
+    {
+      "period": "Final test",
+      "n": 503,
+      "model_id": "B",
+      "log_loss": 0.9324,
+      "brier_score": 0.5492,
+      "accuracy": 0.583,
+      "macro_f1": 0.4199
+    },
+    {
+      "period": "Final test",
+      "n": 503,
+      "model_id": "C",
+      "log_loss": 0.9306,
+      "brier_score": 0.5481,
+      "accuracy": 0.583,
+      "macro_f1": 0.4198
+    }
+  ],
+  "error_analysis": {
+    "draw_findings": "Unweighted A/B/C made no final-test draw argmaxes. Model C final-test confusion counts show 87 actual draws, all missed. Training draw share 21.4%; validation 20.8%. Balanced weights gave 13 draw predictions and 5.8% validation draw recall but worsened both primary scores and accuracy; not selected.",
+    "confusion_model_c_final_test": [
+      [
+        182,
+        0,
+        69
+      ],
+      [
+        51,
+        0,
+        36
+      ],
+      [
+        54,
+        0,
+        111
+      ]
+    ],
+    "supplementary_random_forest_validation": {
+      "source": "reports/random_forest_validation/confusion_matrices.csv",
+      "scope": "Validation only; supplementary and not used to replace the selected Baseline or Models A, B and C.",
+      "n": 250,
+      "class_order": [
+        "H",
+        "D",
+        "A"
+      ],
+      "actual_counts": [
+        117,
+        52,
+        81
+      ],
+      "models": [
+        {
+          "id": "Random Forest A",
+          "confusion": [
+            [
+              79,
+              1,
+              37
+            ],
+            [
+              27,
+              1,
+              24
+            ],
+            [
+              22,
+              1,
+              58
+            ]
+          ]
+        },
+        {
+          "id": "Random Forest B",
+          "confusion": [
+            [
+              81,
+              1,
+              35
+            ],
+            [
+              29,
+              0,
+              23
+            ],
+            [
+              23,
+              1,
+              57
+            ]
+          ]
+        },
+        {
+          "id": "Random Forest C",
+          "confusion": [
+            [
+              78,
+              2,
+              37
+            ],
+            [
+              28,
+              1,
+              23
+            ],
+            [
+              23,
+              1,
+              57
+            ]
+          ]
+        }
+      ]
+    },
+    "per_class": null
+  },
+  "fixtures": [],
+  "predictions": []
+}

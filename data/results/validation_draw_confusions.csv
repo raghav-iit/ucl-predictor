@@ -1,0 +1,352 @@
+model_spec,actual,predicted,count
+Baseline,H,H,117
+Baseline,H,D,0
+Baseline,H,A,0
+Baseline,D,H,52
+Baseline,D,D,0
+Baseline,D,A,0
+Baseline,A,H,81
+Baseline,A,D,0
+Baseline,A,A,0
+Model A,H,H,78
+Model A,H,D,0
+Model A,H,A,39
+Model A,D,H,22
+Model A,D,D,0
+Model A,D,A,30
+Model A,A,H,23
+Model A,A,D,0
+Model A,A,A,58
+Model B,H,H,81
+Model B,H,D,0
+Model B,H,A,36
+Model B,D,H,23
+Model B,D,D,0
+Model B,D,A,29
+Model B,A,H,21
+Model B,A,D,0
+Model B,A,A,60
+Model C,H,H,81
+Model C,H,D,0
+Model C,H,A,36
+Model C,D,H,25
+Model C,D,D,0
+Model C,D,A,27
+Model C,A,H,21
+Model C,A,D,0
+Model C,A,A,60
+Model A | C=0.001,H,H,89
+Model A | C=0.001,H,D,0
+Model A | C=0.001,H,A,28
+Model A | C=0.001,D,H,30
+Model A | C=0.001,D,D,0
+Model A | C=0.001,D,A,22
+Model A | C=0.001,A,H,28
+Model A | C=0.001,A,D,0
+Model A | C=0.001,A,A,53
+Model A | C=0.003,H,H,82
+Model A | C=0.003,H,D,0
+Model A | C=0.003,H,A,35
+Model A | C=0.003,D,H,25
+Model A | C=0.003,D,D,0
+Model A | C=0.003,D,A,27
+Model A | C=0.003,A,H,25
+Model A | C=0.003,A,D,0
+Model A | C=0.003,A,A,56
+Model A | C=0.01,H,H,80
+Model A | C=0.01,H,D,0
+Model A | C=0.01,H,A,37
+Model A | C=0.01,D,H,25
+Model A | C=0.01,D,D,0
+Model A | C=0.01,D,A,27
+Model A | C=0.01,A,H,24
+Model A | C=0.01,A,D,0
+Model A | C=0.01,A,A,57
+Model A | C=0.03,H,H,77
+Model A | C=0.03,H,D,0
+Model A | C=0.03,H,A,40
+Model A | C=0.03,D,H,23
+Model A | C=0.03,D,D,0
+Model A | C=0.03,D,A,29
+Model A | C=0.03,A,H,24
+Model A | C=0.03,A,D,0
+Model A | C=0.03,A,A,57
+Model A | C=0.1,H,H,77
+Model A | C=0.1,H,D,0
+Model A | C=0.1,H,A,40
+Model A | C=0.1,D,H,23
+Model A | C=0.1,D,D,0
+Model A | C=0.1,D,A,29
+Model A | C=0.1,A,H,23
+Model A | C=0.1,A,D,0
+Model A | C=0.1,A,A,58
+Model A | C=0.3,H,H,77
+Model A | C=0.3,H,D,0
+Model A | C=0.3,H,A,40
+Model A | C=0.3,D,H,22
+Model A | C=0.3,D,D,0
+Model A | C=0.3,D,A,30
+Model A | C=0.3,A,H,23
+Model A | C=0.3,A,D,0
+Model A | C=0.3,A,A,58
+Model A | C=1,H,H,78
+Model A | C=1,H,D,0
+Model A | C=1,H,A,39
+Model A | C=1,D,H,22
+Model A | C=1,D,D,0
+Model A | C=1,D,A,30
+Model A | C=1,A,H,23
+Model A | C=1,A,D,0
+Model A | C=1,A,A,58
+Model A | C=3,H,H,79
+Model A | C=3,H,D,0
+Model A | C=3,H,A,38
+Model A | C=3,D,H,22
+Model A | C=3,D,D,0
+Model A | C=3,D,A,30
+Model A | C=3,A,H,21
+Model A | C=3,A,D,0
+Model A | C=3,A,A,60
+Model A | C=10,H,H,79
+Model A | C=10,H,D,0
+Model A | C=10,H,A,38
+Model A | C=10,D,H,24
+Model A | C=10,D,D,0
+Model A | C=10,D,A,28
+Model A | C=10,A,H,20
+Model A | C=10,A,D,0
+Model A | C=10,A,A,61
+Model B | C=0.001,H,H,87
+Model B | C=0.001,H,D,0
+Model B | C=0.001,H,A,30
+Model B | C=0.001,D,H,30
+Model B | C=0.001,D,D,0
+Model B | C=0.001,D,A,22
+Model B | C=0.001,A,H,27
+Model B | C=0.001,A,D,0
+Model B | C=0.001,A,A,54
+Model B | C=0.003,H,H,84
+Model B | C=0.003,H,D,0
+Model B | C=0.003,H,A,33
+Model B | C=0.003,D,H,27
+Model B | C=0.003,D,D,0
+Model B | C=0.003,D,A,25
+Model B | C=0.003,A,H,25
+Model B | C=0.003,A,D,0
+Model B | C=0.003,A,A,56
+Model B | C=0.01,H,H,80
+Model B | C=0.01,H,D,0
+Model B | C=0.01,H,A,37
+Model B | C=0.01,D,H,25
+Model B | C=0.01,D,D,0
+Model B | C=0.01,D,A,27
+Model B | C=0.01,A,H,24
+Model B | C=0.01,A,D,0
+Model B | C=0.01,A,A,57
+Model B | C=0.03,H,H,80
+Model B | C=0.03,H,D,0
+Model B | C=0.03,H,A,37
+Model B | C=0.03,D,H,24
+Model B | C=0.03,D,D,0
+Model B | C=0.03,D,A,28
+Model B | C=0.03,A,H,23
+Model B | C=0.03,A,D,0
+Model B | C=0.03,A,A,58
+Model B | C=0.1,H,H,80
+Model B | C=0.1,H,D,0
+Model B | C=0.1,H,A,37
+Model B | C=0.1,D,H,24
+Model B | C=0.1,D,D,0
+Model B | C=0.1,D,A,28
+Model B | C=0.1,A,H,23
+Model B | C=0.1,A,D,0
+Model B | C=0.1,A,A,58
+Model B | C=0.3,H,H,81
+Model B | C=0.3,H,D,0
+Model B | C=0.3,H,A,36
+Model B | C=0.3,D,H,23
+Model B | C=0.3,D,D,0
+Model B | C=0.3,D,A,29
+Model B | C=0.3,A,H,21
+Model B | C=0.3,A,D,0
+Model B | C=0.3,A,A,60
+Model B | C=1,H,H,81
+Model B | C=1,H,D,0
+Model B | C=1,H,A,36
+Model B | C=1,D,H,23
+Model B | C=1,D,D,0
+Model B | C=1,D,A,29
+Model B | C=1,A,H,21
+Model B | C=1,A,D,0
+Model B | C=1,A,A,60
+Model B | C=3,H,H,81
+Model B | C=3,H,D,0
+Model B | C=3,H,A,36
+Model B | C=3,D,H,24
+Model B | C=3,D,D,0
+Model B | C=3,D,A,28
+Model B | C=3,A,H,22
+Model B | C=3,A,D,0
+Model B | C=3,A,A,59
+Model B | C=10,H,H,80
+Model B | C=10,H,D,0
+Model B | C=10,H,A,37
+Model B | C=10,D,H,24
+Model B | C=10,D,D,0
+Model B | C=10,D,A,28
+Model B | C=10,A,H,22
+Model B | C=10,A,D,0
+Model B | C=10,A,A,59
+Model C | C=0.001,H,H,88
+Model C | C=0.001,H,D,0
+Model C | C=0.001,H,A,29
+Model C | C=0.001,D,H,30
+Model C | C=0.001,D,D,0
+Model C | C=0.001,D,A,22
+Model C | C=0.001,A,H,30
+Model C | C=0.001,A,D,0
+Model C | C=0.001,A,A,51
+Model C | C=0.003,H,H,85
+Model C | C=0.003,H,D,0
+Model C | C=0.003,H,A,32
+Model C | C=0.003,D,H,24
+Model C | C=0.003,D,D,0
+Model C | C=0.003,D,A,28
+Model C | C=0.003,A,H,25
+Model C | C=0.003,A,D,0
+Model C | C=0.003,A,A,56
+Model C | C=0.01,H,H,82
+Model C | C=0.01,H,D,0
+Model C | C=0.01,H,A,35
+Model C | C=0.01,D,H,23
+Model C | C=0.01,D,D,0
+Model C | C=0.01,D,A,29
+Model C | C=0.01,A,H,23
+Model C | C=0.01,A,D,0
+Model C | C=0.01,A,A,58
+Model C | C=0.03,H,H,82
+Model C | C=0.03,H,D,0
+Model C | C=0.03,H,A,35
+Model C | C=0.03,D,H,24
+Model C | C=0.03,D,D,0
+Model C | C=0.03,D,A,28
+Model C | C=0.03,A,H,20
+Model C | C=0.03,A,D,0
+Model C | C=0.03,A,A,61
+Model C | C=0.1,H,H,82
+Model C | C=0.1,H,D,0
+Model C | C=0.1,H,A,35
+Model C | C=0.1,D,H,25
+Model C | C=0.1,D,D,0
+Model C | C=0.1,D,A,27
+Model C | C=0.1,A,H,19
+Model C | C=0.1,A,D,0
+Model C | C=0.1,A,A,62
+Model C | C=0.3,H,H,82
+Model C | C=0.3,H,D,0
+Model C | C=0.3,H,A,35
+Model C | C=0.3,D,H,25
+Model C | C=0.3,D,D,0
+Model C | C=0.3,D,A,27
+Model C | C=0.3,A,H,19
+Model C | C=0.3,A,D,0
+Model C | C=0.3,A,A,62
+Model C | C=1,H,H,81
+Model C | C=1,H,D,0
+Model C | C=1,H,A,36
+Model C | C=1,D,H,25
+Model C | C=1,D,D,0
+Model C | C=1,D,A,27
+Model C | C=1,A,H,21
+Model C | C=1,A,D,0
+Model C | C=1,A,A,60
+Model C | C=3,H,H,80
+Model C | C=3,H,D,0
+Model C | C=3,H,A,37
+Model C | C=3,D,H,24
+Model C | C=3,D,D,1
+Model C | C=3,D,A,27
+Model C | C=3,A,H,22
+Model C | C=3,A,D,0
+Model C | C=3,A,A,59
+Model C | C=10,H,H,79
+Model C | C=10,H,D,1
+Model C | C=10,H,A,37
+Model C | C=10,D,H,25
+Model C | C=10,D,D,1
+Model C | C=10,D,A,26
+Model C | C=10,A,H,20
+Model C | C=10,A,D,0
+Model C | C=10,A,A,61
+Model C + abs Elo gap | C=0.003,H,H,86
+Model C + abs Elo gap | C=0.003,H,D,0
+Model C + abs Elo gap | C=0.003,H,A,31
+Model C + abs Elo gap | C=0.003,D,H,24
+Model C + abs Elo gap | C=0.003,D,D,0
+Model C + abs Elo gap | C=0.003,D,A,28
+Model C + abs Elo gap | C=0.003,A,H,25
+Model C + abs Elo gap | C=0.003,A,D,0
+Model C + abs Elo gap | C=0.003,A,A,56
+Model C + abs Elo gap | C=0.01,H,H,84
+Model C + abs Elo gap | C=0.01,H,D,0
+Model C + abs Elo gap | C=0.01,H,A,33
+Model C + abs Elo gap | C=0.01,D,H,23
+Model C + abs Elo gap | C=0.01,D,D,0
+Model C + abs Elo gap | C=0.01,D,A,29
+Model C + abs Elo gap | C=0.01,A,H,23
+Model C + abs Elo gap | C=0.01,A,D,0
+Model C + abs Elo gap | C=0.01,A,A,58
+Model C + abs Elo gap | C=0.1,H,H,82
+Model C + abs Elo gap | C=0.1,H,D,0
+Model C + abs Elo gap | C=0.1,H,A,35
+Model C + abs Elo gap | C=0.1,D,H,27
+Model C + abs Elo gap | C=0.1,D,D,0
+Model C + abs Elo gap | C=0.1,D,A,25
+Model C + abs Elo gap | C=0.1,A,H,19
+Model C + abs Elo gap | C=0.1,A,D,0
+Model C + abs Elo gap | C=0.1,A,A,62
+Model C + abs Elo gap | C=1,H,H,83
+Model C + abs Elo gap | C=1,H,D,0
+Model C + abs Elo gap | C=1,H,A,34
+Model C + abs Elo gap | C=1,D,H,25
+Model C + abs Elo gap | C=1,D,D,0
+Model C + abs Elo gap | C=1,D,A,27
+Model C + abs Elo gap | C=1,A,H,21
+Model C + abs Elo gap | C=1,A,D,0
+Model C + abs Elo gap | C=1,A,A,60
+Model C | balanced | C=0.003,H,H,74
+Model C | balanced | C=0.003,H,D,5
+Model C | balanced | C=0.003,H,A,38
+Model C | balanced | C=0.003,D,H,18
+Model C | balanced | C=0.003,D,D,3
+Model C | balanced | C=0.003,D,A,31
+Model C | balanced | C=0.003,A,H,18
+Model C | balanced | C=0.003,A,D,5
+Model C | balanced | C=0.003,A,A,58
+Model C | balanced | C=0.01,H,H,72
+Model C | balanced | C=0.01,H,D,7
+Model C | balanced | C=0.01,H,A,38
+Model C | balanced | C=0.01,D,H,18
+Model C | balanced | C=0.01,D,D,5
+Model C | balanced | C=0.01,D,A,29
+Model C | balanced | C=0.01,A,H,18
+Model C | balanced | C=0.01,A,D,5
+Model C | balanced | C=0.01,A,A,58
+Model C | balanced | C=1,H,H,71
+Model C | balanced | C=1,H,D,8
+Model C | balanced | C=1,H,A,38
+Model C | balanced | C=1,D,H,17
+Model C | balanced | C=1,D,D,7
+Model C | balanced | C=1,D,A,28
+Model C | balanced | C=1,A,H,13
+Model C | balanced | C=1,A,D,7
+Model C | balanced | C=1,A,A,61
+Model C | balanced weights,H,H,71
+Model C | balanced weights,H,D,8
+Model C | balanced weights,H,A,38
+Model C | balanced weights,D,H,17
+Model C | balanced weights,D,D,7
+Model C | balanced weights,D,A,28
+Model C | balanced weights,A,H,13
+Model C | balanced weights,A,D,7
+Model C | balanced weights,A,A,61

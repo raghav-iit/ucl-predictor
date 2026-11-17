@@ -1,0 +1,7 @@
+split,class,n,share
+train,H,338,0.4543010752688172
+train,D,159,0.21370967741935484
+train,A,247,0.33198924731182794
+validation,H,117,0.468
+validation,D,52,0.208
+validation,A,81,0.324

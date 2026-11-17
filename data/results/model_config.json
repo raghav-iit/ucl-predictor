@@ -1,0 +1,121 @@
+{
+  "logistic_c": 0.003,
+  "solver": "lbfgs",
+  "max_iter": 2000,
+  "random_state": 335,
+  "class_order": [
+    "H",
+    "D",
+    "A"
+  ],
+  "imputation": "median; fitted within training-only pipeline",
+  "scaling": "StandardScaler; fitted within training-only pipeline",
+  "feature_sets": {
+    "Model A": [
+      "home_prior_matches",
+      "home_points_per_match",
+      "home_goals_for_per_match",
+      "home_goals_against_per_match",
+      "home_goal_diff_per_match",
+      "home_win_rate",
+      "home_draw_rate",
+      "away_prior_matches",
+      "away_points_per_match",
+      "away_goals_for_per_match",
+      "away_goals_against_per_match",
+      "away_goal_diff_per_match",
+      "away_win_rate",
+      "away_draw_rate",
+      "home_team_home_prior_matches",
+      "home_team_home_points_per_match",
+      "away_team_away_prior_matches",
+      "away_team_away_points_per_match"
+    ],
+    "Model B": [
+      "home_prior_matches",
+      "home_points_per_match",
+      "home_goals_for_per_match",
+      "home_goals_against_per_match",
+      "home_goal_diff_per_match",
+      "home_win_rate",
+      "home_draw_rate",
+      "away_prior_matches",
+      "away_points_per_match",
+      "away_goals_for_per_match",
+      "away_goals_against_per_match",
+      "away_goal_diff_per_match",
+      "away_win_rate",
+      "away_draw_rate",
+      "home_team_home_prior_matches",
+      "home_team_home_points_per_match",
+      "away_team_away_prior_matches",
+      "away_team_away_points_per_match",
+      "elo_difference"
+    ],
+    "Model C": [
+      "home_prior_matches",
+      "home_points_per_match",
+      "home_goals_for_per_match",
+      "home_goals_against_per_match",
+      "home_goal_diff_per_match",
+      "home_win_rate",
+      "home_draw_rate",
+      "away_prior_matches",
+      "away_points_per_match",
+      "away_goals_for_per_match",
+      "away_goals_against_per_match",
+      "away_goal_diff_per_match",
+      "away_win_rate",
+      "away_draw_rate",
+      "home_team_home_prior_matches",
+      "home_team_home_points_per_match",
+      "away_team_away_prior_matches",
+      "away_team_away_points_per_match",
+      "elo_difference",
+      "home_recent_matches",
+      "home_recent5_points_per_match",
+      "home_recent5_goal_diff_per_match",
+      "away_recent_matches",
+      "away_recent5_points_per_match",
+      "away_recent5_goal_diff_per_match",
+      "recent5_points_difference",
+      "recent5_goal_diff_difference"
+    ]
+  },
+  "validation_train_seasons": [
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21"
+  ],
+  "validation_seasons": [
+    "2021-22",
+    "2022-23"
+  ],
+  "validation_train_rows": 744,
+  "validation_rows": 250,
+  "final_train_seasons": [
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23"
+  ],
+  "final_test_seasons": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "final_train_rows": 994,
+  "final_test_rows": 503,
+  "primary_metrics": [
+    "log_loss",
+    "multiclass_brier"
+  ],
+  "split_assignments_file": "data/metadata/evaluation_split_assignments.csv"
+}

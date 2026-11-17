@@ -1,0 +1,11 @@
+{
+  "run_name": "initial_c1",
+  "logistic_c": 1.0,
+  "solver": "lbfgs",
+  "max_iter": 2000,
+  "class_order": ["H", "D", "A"],
+  "imputer": "median, fitted on training rows",
+  "scaler": "StandardScaler, fitted on training rows",
+  "random_state": 335,
+  "note": "Original run retained before selected C=0.003 evaluation."
+}

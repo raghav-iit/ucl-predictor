@@ -1,0 +1,12 @@
+season,source_url,sha256,bytes,header_match_count,parsed_match_count,parsed_team_count,date_min,date_max
+2015-16,https://raw.githubusercontent.com/openfootball/champions-league/master/2015-16/cl.txt,09b7c605a6c723ffd85b9cb8a36f6bcf427485b9b0427b49014da22d455a8d8c,10471,125,125,32,2015-09-15,2016-05-28
+2016-17,https://raw.githubusercontent.com/openfootball/champions-league/master/2016-17/cl.txt,fe604207c9e945d2a76ed9d660b5499c4680d8b474aeeb166d585f819c029a31,10446,125,125,32,2016-09-13,2017-06-03
+2017-18,https://raw.githubusercontent.com/openfootball/champions-league/master/2017-18/cl.txt,5f022938be481f3f9fa88fa7580033aab631a9dd321170d2e7b7ee558c92e468,10389,125,125,32,2017-09-12,2018-05-26
+2018-19,https://raw.githubusercontent.com/openfootball/champions-league/master/2018-19/cl.txt,7ae98396b779c3e97d049e77bbd0af6dabedcecdd73fa17d27a212aadd18c727,10379,125,125,32,2018-09-18,2019-06-01
+2019-20,https://raw.githubusercontent.com/openfootball/champions-league/master/2019-20/cl.txt,e0f6d8990b3110108193eecdcd698dfa48b6f324ffa7532cdc11aea19f7ee419,9967,119,119,32,2019-09-17,2020-08-23
+2020-21,https://raw.githubusercontent.com/openfootball/champions-league/master/2020-21/cl.txt,9d94e40aa2fe2e98cbe5eedcffb7b9223daaaf3acf682411f4965f92a65d666e,10495,125,125,32,2020-10-20,2021-05-29
+2021-22,https://raw.githubusercontent.com/openfootball/champions-league/master/2021-22/cl.txt,36241f4479aa9efda62c62318366bbf36f84cc8719f6387c5747cb5dea7ec519,10428,125,125,32,2021-09-14,2022-05-28
+2022-23,https://raw.githubusercontent.com/openfootball/champions-league/master/2022-23/cl.txt,bf9cd05939b055f12ee9b095bec1c20a0922277bef8940172218548de2e7b93a,10399,125,125,32,2022-09-06,2023-06-10
+2023-24,https://raw.githubusercontent.com/openfootball/champions-league/master/2023-24/cl.txt,5872bee720b32410f28c5272fb7fe7b07aa0f66bcb31ffe157893d75c14c47c5,10428,125,125,32,2023-09-19,2024-06-01
+2024-25,https://raw.githubusercontent.com/openfootball/champions-league/master/2024-25/cl.txt,c2692b22af02c5df4587b69c5f430aebf7d936845b5337aee462ce8e649eb1b5,15374,189,189,36,2024-09-17,2025-05-31
+2025-26,https://raw.githubusercontent.com/openfootball/champions-league/master/2025-26/cl.txt,2b1877308587ff1004c21b8e961b9050b8754f968244e0635eb005040fd9d5cb,15265,189,189,36,2025-09-16,2026-05-30

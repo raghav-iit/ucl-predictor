@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061225">
+  <meta name="description" content="An evidence-led walkthrough of a UEFA Champions League match outcome prediction project at IIT Gandhinagar.">
+  <title>UCL Match Outcome Predictor | ES 335 · IIT Gandhinagar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=classwise-analysis-2">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="UCL Predictor, back to top"><span class="brand-mark" aria-hidden="true">★</span><span>ES 335 <i>·</i> IITGN</span></a>
+    <nav class="primary-nav" aria-label="Main navigation">
+      <a href="#question">The question</a><a href="#dataset">Dataset</a><a href="#models">Models</a><a href="#results">Results</a><a class="nav-predict" href="#predictor">Predictor <span aria-hidden="true">↗</span></a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+  </header>
+  <div class="progress-track" aria-hidden="true"><span id="page-progress"></span></div>
+  <aside class="section-index" aria-label="Section navigation"></aside>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="A Champions League stadium illuminated in blue above the pitch"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="hero-course">IIT GANDHINAGAR <span>·</span> ES 335</p>
+        <h1 id="hero-title">UEFA Champions League<br><strong>Match Outcome Predictor</strong></h1>
+        <p class="hero-summary">A chronological study of how pre-match team history, strength and form shape the probability of a 90-minute result.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#question">Explore the research <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="#predictor">Open the predictor <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-bottom"><span>PROJECT WALKTHROUGH</span><span>SCROLL TO EXPLORE <b aria-hidden="true">↓</b></span></div>
+    </section>
+
+    <section class="chapter question-section" id="question" aria-labelledby="question-title">
+      <div class="question-layout">
+        <h2 id="question-title">Can pre-match signals improve the forecast of a Champions League result?</h2>
+        <div class="chapter-copy"><p>For each fixture, estimate the probabilities of a home win, draw or away win using only information available before kickoff. The target is regulation time; extra time, penalties, aggregate score and progression are separate questions.</p><p>The study compares a training-period outcome-frequency baseline with three controlled feature sets. It tests whether historical team performance, Elo strength and recent form improve probabilistic forecasts on later matches.</p><div class="inline-note"><span class="note-mark">i</span><p>The research question refines the submitted proposal; it has not been formally resubmitted. Probabilities are estimates, not guarantees.</p></div></div>
+      </div>
+    </section>
+
+    <section class="chapter dataset-section" id="dataset" aria-labelledby="dataset-title">
+      <div class="chapter-head"><h2 id="dataset-title">A decade of European nights, read one fixture at a time.</h2><p>OpenFootball Champions League Football.TXT main-competition season files. Qualifying rounds are excluded; source-declared match counts are checked against parsed records.</p></div>
+      <div class="dataset-band">
+        <div class="dataset-total"><strong data-field="dataset.row_count">—</strong><span>matches parsed</span></div>
+        <div><strong data-field="dataset.season_range">—</strong><span>season coverage</span></div>
+        <div><strong data-field="dataset.date_range">—</strong><span>first to last match</span></div>
+        <div><strong>90′</strong><span>target outcome only</span></div>
+      </div>
+      <div class="distribution-layout"><div><h3>Outcomes are not evenly distributed.</h3><p>Home wins make up the largest share. Draws are the smallest class, a pattern that later matters when we inspect model errors.</p></div><div class="distribution-chart"><div class="distribution-track" id="outcome-distribution" role="img" aria-label="Historical outcome distribution"></div><div class="distribution-key" id="distribution-key"></div></div></div>
+      <p class="source-line">SOURCE <span data-field="dataset.source">—</span></p>
+    </section>
+
+    <section class="chapter features-section" id="features" aria-labelledby="features-title">
+      <div class="chapter-head"><h2 id="features-title">Only earlier matches inform a prediction.</h2><p>State is updated chronologically from 90-minute outcomes. Every fixture on the same date uses state from before that date; results are added only after all same-day feature rows are built.</p></div>
+      <div class="feature-ledger">
+        <div class="ledger-head"><span>FEATURE SET</span><span>INFORMATION ADDED</span><span>PRE-MATCH RULE</span></div>
+        <div class="ledger-row"><strong><b>A</b> Team history</strong><p>Prior match counts; points, goals for/against, goal difference, win/draw rates per match; home-at-home and away-away rates.</p><p>Matches dated earlier than the fixture.</p></div>
+        <div class="ledger-row"><strong><b>B</b> Elo strength</strong><p>Model A plus home-minus-away Elo difference, including a fixed +60 home-advantage adjustment.</p><p>Initial 1500; K = 24; updates after prior dates from 90-minute outcomes.</p></div>
+        <div class="ledger-row"><strong><b>C</b> Recent form</strong><p>Model B plus points and goal difference per match over each team’s latest up to five earlier UCL matches.</p><p>Form rolls across seasons and excludes the fixture date.</p></div>
+      </div>
+      <div class="guardrails"><div><b>No same-day leakage</b><span>Feature rows share start-of-day state.</span></div><div><b>Train-only transforms</b><span>Median imputation and scaling fit inside the training pipeline.</span></div><div><b>Separate score phases</b><span>Extra time and shootouts do not define the target.</span></div><div><b>Cold starts stay visible</b><span>New teams begin with zero matches, missing rates and Elo 1500.</span></div></div>
+      <p class="technical-note">Team keys use a reviewed project alias map, not official UEFA identifiers. History starts in 2015/16, so early team histories are left-censored.</p>
+    </section>
+
+    <section class="chapter models-section" id="models" aria-labelledby="models-title">
+      <div class="chapter-head"><h2 id="models-title">Add signal in controlled steps.</h2><p>One regularized multinomial Logistic Regression family and one common scoring protocol. Each model adds a feature group so its contribution can be compared.</p></div>
+      <div class="model-compare" id="model-cards"></div>
+      <div class="model-method"><span>SHARED PIPELINE</span><p>Median imputation → standard scaling → Logistic Regression (lbfgs, L2), C = 0.003, max_iter = 2,000, seed 335. C was selected on validation and applied consistently. An earlier C = 1 run had already exposed final-test results; interpret the final comparison cautiously.</p></div>
+    </section>
+
+    <section class="chapter evaluation-section" id="evaluation" aria-labelledby="evaluation-title">
+      <div class="chapter-head"><h2 id="evaluation-title">Chronological by design. Comparable at every step.</h2><p>Future seasons are held out in time. Every compared system is scored on common matches, and preprocessing is fitted on training data only.</p></div>
+      <div class="timeline" id="evaluation-timeline"></div>
+      <div class="metric-notes"><article><h3>Log loss <span>PRIMARY</span></h3><p>Penalizes assigning too little probability to the observed class, especially confident errors.</p></article><article><h3>Multiclass Brier <span>PRIMARY</span></h3><p>Average squared H/D/A probability error per match. Lower is better for both primary metrics.</p></article><article><h3>Secondary evidence</h3><p>Accuracy, per-class and macro precision/recall/F1, confusion matrices and one-vs-rest reliability bins show misses and probability behavior.</p></article></div>
+      <p class="technical-note">One validation window and one final period—not repeated rolling-origin evaluation. The final test crosses the 2024/25 format change; knockout subsets are small, with no uncertainty intervals.</p>
+    </section>
+
+    <section class="chapter results-section" id="results" aria-labelledby="results-title">
+      <div class="results-head"><div><h2 id="results-title">Probability quality leads the scorecard.</h2><p>Use the period selector to compare the saved validation and final-test results. Lower is better for log loss and Brier; higher is better for accuracy and macro F1.</p></div><div class="result-controls"><label for="period-select">EVALUATION PERIOD</label><select id="period-select"><option>Final test</option><option>Validation</option></select><label for="metric-select">METRIC</label><select id="metric-select"><option value="log_loss">Log loss ↓</option><option value="brier_score">Brier score ↓</option><option value="accuracy">Accuracy ↑</option><option value="macro_f1">Macro F1 ↑</option></select></div></div>
+      <div class="chart-area"><div class="chart-title"><span id="chart-caption">FINAL TEST · LOG LOSS</span><span>MODEL COMPARISON</span></div><div id="results-chart" class="results-chart" aria-label="Model evaluation comparison"></div></div>
+      <div class="table-wrap"><table class="results-table" id="result-table"><caption class="sr-only">Evaluation results by model and period</caption><thead><tr><th>Period</th><th>System</th><th>Matches</th><th>Log loss ↓</th><th>Brier ↓</th><th>Accuracy</th><th>Macro F1</th></tr></thead><tbody></tbody></table></div>
+      <p class="results-provenance">Displayed metrics are rounded to four decimals from the saved chronological evaluation results. <a href="#errors">Class-wise recall and error patterns follow in Error analysis.</a></p>
+    </section>
+
+    <section class="chapter error-section" id="errors" aria-labelledby="errors-title">
+      <div class="error-layout"><div><h2 id="errors-title">Class-wise errors show the draw blind spot.</h2><p>Across the 503-match final test, none of Models A, B or C assigned a draw the highest probability. Model C predicted 0 of the 87 actual draws as draws. This is a serious class-specific weakness, not a claim that all 503 predictions were wrong: the confusion matrix also records correct home and away predictions. Despite the draw weakness, all three models improve on the baseline in both primary aggregate metrics, log loss and Brier score.</p><div class="draw-stat"><strong>0 / 87</strong><span>Actual draws predicted as draws by Model C</span></div><div class="error-explanation"><h3>Why not rebalance the classes?</h3><p>Draws were 21.4% of training and 20.8% of validation. Balanced class weights produced 13 draw predictions and 5.8% draw recall, but worsened both primary metrics and accuracy, so they were not selected.</p></div></div><div class="confusion-wrap"><div class="confusion-heading"><h3>Model C · final-test confusion</h3><span>503 MATCHES</span></div><p class="matrix-key">Rows are actual outcomes. Columns are predicted outcomes.</p><table class="confusion-matrix"><thead><tr><th>Actual ↓ / predicted →</th><th>Home</th><th>Draw</th><th>Away</th></tr></thead><tbody><tr><th>Home</th><td>182</td><td>0</td><td>69</td></tr><tr><th>Draw</th><td>51</td><td class="miss">0</td><td>36</td></tr><tr><th>Away</th><td>54</td><td>0</td><td>111</td></tr></tbody></table><div class="matrix-foot"><span>Draw recall: 0 / 87</span><span>Not threshold-tuned</span></div></div></div>
+      <div class="class-analysis" aria-label="Three-class performance analysis">
+        <div class="analysis-heading"><h3>Model C recall by actual outcome</h3><p>Recall is the share of each actual class correctly identified: diagonal count divided by its row total.</p></div>
+        <div class="class-analysis-grid"><div id="model-c-recall-chart" class="class-recall-chart" aria-label="Model C final-test recall by outcome"></div><div class="distribution-panel"><h4>Actual and predicted class mix</h4><div id="model-c-distribution" class="distribution-comparison" aria-label="Actual and predicted class distribution"></div></div></div>
+        <p id="model-c-error-reading" class="class-error-reading"></p>
+      </div>
+      <div class="rf-analysis" aria-label="Supplementary Random Forest validation analysis">
+        <div class="analysis-heading"><h3>Supplementary Random Forest · validation only</h3><p>These three fixed forests are exploratory comparison rows on the 250-match validation set. They do not replace the selected logistic models or use final-test results.</p></div>
+        <div class="rf-analysis-grid"><div id="rf-recall-chart" class="rf-recall-chart" aria-label="Random Forest validation recall by outcome"></div><div class="distribution-panel"><h4>Actual and predicted class mix</h4><div id="rf-distribution" class="distribution-comparison" aria-label="Random Forest validation class distributions"></div></div></div>
+        <p id="rf-error-reading" class="class-error-reading"></p>
+      </div>
+      <div class="limits-strip"><h3>Read these results with their limits.</h3><p>Only one validation window and one final period were used. The final test crosses a competition-format change; no uncertainty intervals are available. The C = 0.003 choice followed validation, but an earlier C = 1 test run had already been viewed. Team histories are left-censored, and the unweighted models under-predict draws.</p></div>
+    </section>
+
+    <section class="predictor-section" id="predictor" aria-labelledby="predictor-title">
+      <div class="predictor-backdrop"></div><div class="predictor-inner">
+        <div class="predictor-intro"><div><h2 id="predictor-title">Explore a fixture.<br><strong>Read the probabilities.</strong></h2><p>Run a manual estimate from the fitted models and saved team state, or explore the 503 completed final-test fixtures with their frozen predictions and actual 90-minute results.</p></div><div class="ucl-mark" aria-label="90 minute home draw away outcome"><span>UCL</span><small>90 MIN<br>H · D · A</small></div></div>
+        <div class="predictor-panel">
+          <div class="predictor-mode-row"><label for="prediction-mode">PREDICTION MODE</label><select id="prediction-mode"><option value="manual">Manual model estimate</option><option value="historical">Historical final-test lookup</option></select><p id="predictor-mode-note">Team history available through 30 May 2026. Manual estimates do not include 2026/27 results or current-season form.</p></div>
+          <div class="fixture-controls">
+            <div class="team-picker"><label for="home-team">HOME TEAM</label><div class="team-select-row"><span class="club-crest" data-crest="home" aria-hidden="true"><b>H</b></span><select id="home-team" disabled><option>Loading teams…</option></select></div></div>
+            <span class="versus">VS</span>
+            <div class="team-picker"><label for="away-team">AWAY TEAM</label><div class="team-select-row"><span class="club-crest" data-crest="away" aria-hidden="true"><b>A</b></span><select id="away-team" disabled><option>Loading teams…</option></select></div></div>
+            <div class="model-picker"><label for="model-select">MODEL</label><select id="model-select" disabled><option value="Baseline">Baseline</option><option value="Model A">Model A</option><option value="Model B">Model B</option><option value="Model C">Model C</option></select></div>
+            <button class="predict-button" id="predict-button" disabled>Explore prediction <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="prediction-output" id="prediction-output" aria-live="polite"><div class="empty-prediction"><span class="empty-symbol" aria-hidden="true">H/D/A</span><div><h3>Loading model and match-centre exports.</h3><p>Saved backend data is being checked before you explore a scenario or final-test fixture.</p></div></div></div>
+          <div class="feature-output" id="feature-output"><div class="feature-output-heading"><h3>Pre-match feature inspection</h3><span>MODEL INPUT CONTEXT</span></div><div class="feature-grid"><div><small>FEATURE INSPECTION</small><b>Generate an estimate or select a saved fixture to inspect its pre-match inputs.</b></div></div></div>
+          <p class="predictor-disclaimer">Manual mode estimates a selected team pairing from saved model parameters and the frozen history snapshot; it does not verify a scheduled fixture or use live data. Historical mode displays only saved retrospective predictions and actual results.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter conclusion-section" id="conclusion" aria-labelledby="conclusion-title">
+      <div class="conclusion-layout"><h2 id="conclusion-title">A better probability score does not guarantee a complete forecast.</h2><div><p>Feature additions improve on the class-frequency baseline in this saved comparison, while the three trained models are close on the final test. Draw handling remains a clear weakness. Results should be read alongside the chronological split, selection history and changing competition format.</p><div class="conclusion-links"><div><h3>Reproduce the study</h3><p>Use the Python project to rebuild the dataset, features, saved model comparisons and JSON/CSV frontend exports.</p><a href="#" id="repository-link" aria-disabled="true">Repository link not supplied <span aria-hidden="true">↗</span></a></div><div><h3>References</h3><div id="references-list" class="references-list"><a href="https://github.com/openfootball/champions-league" target="_blank" rel="noopener noreferrer">OpenFootball Champions League dataset</a><a href="https://openfootball.github.io/spec/" target="_blank" rel="noopener noreferrer">Football.TXT specification</a><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html" target="_blank" rel="noopener noreferrer">scikit-learn Logistic Regression</a><a href="https://www.uefa.com/uefachampionsleague/fixtures-results/" target="_blank" rel="noopener noreferrer">UEFA fixtures and results</a></div></div></div></div></div>
+      <p class="project-credit">Raghav Verma</p>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">★</span><span>ES 335 <i>·</i> IITGN</span></a><span>Football outcomes, examined through data.</span><a href="#top">BACK TO TOP ↑</a></footer>
+  <script src="app.js?v=manual-inference" defer></script>
+</body>
+</html>
+

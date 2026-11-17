@@ -1,0 +1,73 @@
+period,model,actual,predicted,count
+validation,Baseline,H,H,117
+validation,Baseline,H,D,0
+validation,Baseline,H,A,0
+validation,Baseline,D,H,52
+validation,Baseline,D,D,0
+validation,Baseline,D,A,0
+validation,Baseline,A,H,81
+validation,Baseline,A,D,0
+validation,Baseline,A,A,0
+validation,Model A,H,H,82
+validation,Model A,H,D,0
+validation,Model A,H,A,35
+validation,Model A,D,H,25
+validation,Model A,D,D,0
+validation,Model A,D,A,27
+validation,Model A,A,H,25
+validation,Model A,A,D,0
+validation,Model A,A,A,56
+validation,Model B,H,H,84
+validation,Model B,H,D,0
+validation,Model B,H,A,33
+validation,Model B,D,H,27
+validation,Model B,D,D,0
+validation,Model B,D,A,25
+validation,Model B,A,H,25
+validation,Model B,A,D,0
+validation,Model B,A,A,56
+validation,Model C,H,H,85
+validation,Model C,H,D,0
+validation,Model C,H,A,32
+validation,Model C,D,H,24
+validation,Model C,D,D,0
+validation,Model C,D,A,28
+validation,Model C,A,H,25
+validation,Model C,A,D,0
+validation,Model C,A,A,56
+final_test,Baseline,H,H,251
+final_test,Baseline,H,D,0
+final_test,Baseline,H,A,0
+final_test,Baseline,D,H,87
+final_test,Baseline,D,D,0
+final_test,Baseline,D,A,0
+final_test,Baseline,A,H,165
+final_test,Baseline,A,D,0
+final_test,Baseline,A,A,0
+final_test,Model A,H,H,184
+final_test,Model A,H,D,0
+final_test,Model A,H,A,67
+final_test,Model A,D,H,51
+final_test,Model A,D,D,0
+final_test,Model A,D,A,36
+final_test,Model A,A,H,54
+final_test,Model A,A,D,0
+final_test,Model A,A,A,111
+final_test,Model B,H,H,181
+final_test,Model B,H,D,0
+final_test,Model B,H,A,70
+final_test,Model B,D,H,49
+final_test,Model B,D,D,0
+final_test,Model B,D,A,38
+final_test,Model B,A,H,53
+final_test,Model B,A,D,0
+final_test,Model B,A,A,112
+final_test,Model C,H,H,182
+final_test,Model C,H,D,0
+final_test,Model C,H,A,69
+final_test,Model C,D,H,51
+final_test,Model C,D,D,0
+final_test,Model C,D,A,36
+final_test,Model C,A,H,54
+final_test,Model C,A,D,0
+final_test,Model C,A,A,111

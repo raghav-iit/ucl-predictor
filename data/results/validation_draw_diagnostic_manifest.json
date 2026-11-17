@@ -1,0 +1,27 @@
+{
+  "training_seasons": [
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21"
+  ],
+  "training_rows": 744,
+  "validation_seasons": [
+    "2021-22",
+    "2022-23"
+  ],
+  "validation_rows": 250,
+  "loaded_rows": 994,
+  "last_loaded_date": "2023-06-10",
+  "final_test_rows_retained": false,
+  "model_selection_uses_final_test": false,
+  "specifications": [
+    "Baseline",
+    "Model A/B/C, C=1, unweighted",
+    "A/B/C common C grid 0.001/0.003/0.01/0.03/0.1/0.3/1/3/10",
+    "C plus absolute raw Elo gap at C=0.003/0.01/0.1/1",
+    "Model C balanced weights at C=0.003/0.01/1"
+  ]
+}
