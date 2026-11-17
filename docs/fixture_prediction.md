@@ -68,4 +68,4 @@ Important limitations:
 - Team identity aliases are project heuristics and may merge or separate clubs incorrectly.
 - There is no fixture schedule verification or automatic feed.
 - Predictions are model estimates from a limited feature set, not guarantees, bookmaker odds or official UEFA probabilities.
-- A Streamlit app does not itself meet the original static GitHub Pages deployment requirement. Hosting/deployment remains unperformed and needs a compatible architecture/decision.
+- GitHub Pages hosts the static research site from `main` → `/docs`; it does not run the separate Streamlit server. The static site implements manual inference in browser JavaScript from saved parameters/state. Local changes to the site require review and a later push before they appear publicly.

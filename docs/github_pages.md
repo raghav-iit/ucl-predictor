@@ -19,14 +19,11 @@ The export scripts do not fit or select models. Avoid running the model evaluati
 
 ## GitHub Pages setup and current status
 
-The verified public repository is [github.com/raghav-iit/ucl-predictor](https://github.com/raghav-iit/ucl-predictor), and this checkout has that repository configured as `origin`. The project is not committed or pushed, and GitHub Pages has not been published. Once the owner reviews and pushes the submission files:
+The published repository is [github.com/raghav-iit/ucl-predictor](https://github.com/raghav-iit/ucl-predictor), with the initial submission commit `932b50a` on `main`. GitHub Pages is configured from `main` → `/docs` and is available at [raghav-iit.github.io/ucl-predictor](https://raghav-iit.github.io/ucl-predictor/). Local changes made after that publication require owner review and a separate push before they appear publicly.
 
-1. Open repository **Settings → Pages**.
-2. Select **Deploy from a branch**.
-3. Select the intended submission branch and the `/docs` folder, then save.
-4. After GitHub reports a successful deployment, test the published page, navigation, assets, JSON exports, predictor and repository/reference links.
+To verify a later update, open repository **Settings → Pages**, confirm `main` and `/docs`, wait for the Actions deployment to pass, then test the public page, navigation, assets, JSON exports, predictor and repository/reference links.
 
-Use only the Pages URL shown in the repository settings after publication; no published-site URL is claimed here.
+Do not claim that an unpushed local edit is present on the public site.
 
 ## Static-hosting behavior and limitations
 

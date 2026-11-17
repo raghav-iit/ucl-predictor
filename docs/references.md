@@ -13,5 +13,6 @@ Accessed 2026-11-17 unless a version or data date is specified.
 9. UEFA. “Fixtures & results — UEFA Champions League.” Official human-readable competition schedule/results page. https://www.uefa.com/uefachampionsleague/fixtures-results/
 10. UEFA. “General Terms and Conditions.” The terms prohibit automated scraping/collection of site content. https://www.uefa.com/termsconditions/
 11. OpenFootball. “UEFA Champions League.” Current structured public repository; CC0-1.0 license. The repository reviewed for the manual prediction interface had season folders through 2025/26 and did not provide an established automatically updated 2026/27 fixture feed. https://github.com/openfootball/champions-league
+12. ES 335 course staff. “Machine Learning Course Project Guide.” Official project requirements and evaluation rubric, supplied by the project owner. https://ml2026.floodresq.com/project-guide
 
 The SoFIFA-derived player datasets are third-party scraped data. Dataset-card license fields do not by themselves settle rights in the underlying source-derived content; verify applicable terms before redistributing player records.

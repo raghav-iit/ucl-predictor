@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=classwise-analysis-2">
+  <link rel="stylesheet" href="styles.css?v=rubric-evidence-3">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -53,6 +53,7 @@
       </div>
       <div class="distribution-layout"><div><h3>Outcomes are not evenly distributed.</h3><p>Home wins make up the largest share. Draws are the smallest class, a pattern that later matters when we inspect model errors.</p></div><div class="distribution-chart"><div class="distribution-track" id="outcome-distribution" role="img" aria-label="Historical outcome distribution"></div><div class="distribution-key" id="distribution-key"></div></div></div>
       <p class="source-line">SOURCE <span data-field="dataset.source">—</span></p>
+      <div class="technical-note"><strong>What one row means.</strong> One row is one completed main-competition fixture: date, season/phase, home and away teams, regulation-time goals, and H/D/A outcome. Extra-time scores and shootouts are kept separate. Quality checks compare parsed counts with source-declared counts and check duplicate fixtures, dates and missing regulation outcomes; this does not independently verify every match against UEFA.</div>
     </section>
 
     <section class="chapter features-section" id="features" aria-labelledby="features-title">
@@ -71,6 +72,7 @@
       <div class="chapter-head"><h2 id="models-title">Add signal in controlled steps.</h2><p>One regularized multinomial Logistic Regression family and one common scoring protocol. Each model adds a feature group so its contribution can be compared.</p></div>
       <div class="model-compare" id="model-cards"></div>
       <div class="model-method"><span>SHARED PIPELINE</span><p>Median imputation → standard scaling → Logistic Regression (lbfgs, L2), C = 0.003, max_iter = 2,000, seed 335. C was selected on validation and applied consistently. An earlier C = 1 run had already exposed final-test results; interpret the final comparison cautiously.</p></div>
+      <p class="technical-note">The class-frequency baseline is a simple reference. Multinomial Logistic Regression gives comparable H/D/A probabilities while allowing regularized additive effects on class log-odds; it is a practical probability model, not assumed to be universally best. FIFA/SoFIFA ratings were investigated but excluded: dates, club membership and lineup evidence do not support a consistent time-safe player panel. Squad membership is not treated as match participation, and Model D has not been evaluated.</p>
     </section>
 
     <section class="chapter evaluation-section" id="evaluation" aria-labelledby="evaluation-title">
@@ -85,10 +87,26 @@
       <div class="chart-area"><div class="chart-title"><span id="chart-caption">FINAL TEST · LOG LOSS</span><span>MODEL COMPARISON</span></div><div id="results-chart" class="results-chart" aria-label="Model evaluation comparison"></div></div>
       <div class="table-wrap"><table class="results-table" id="result-table"><caption class="sr-only">Evaluation results by model and period</caption><thead><tr><th>Period</th><th>System</th><th>Matches</th><th>Log loss ↓</th><th>Brier ↓</th><th>Accuracy</th><th>Macro F1</th></tr></thead><tbody></tbody></table></div>
       <p class="results-provenance">Displayed metrics are rounded to four decimals from the saved chronological evaluation results. <a href="#errors">Class-wise recall and error patterns follow in Error analysis.</a></p>
+      <div class="chapter-head"><h3>Performance by competition phase</h3><p>Saved final-test slices are descriptive. The competition moved from a 32-team group stage to a 36-team league phase in 2024/25, so these are not like-for-like environments.</p></div>
+      <div class="table-wrap"><table class="results-table"><caption>Final-test phase-specific log loss and multiclass Brier; lower is better</caption><thead><tr><th>Format and phase</th><th>Matches</th><th>Model A LL / Brier</th><th>Model B LL / Brier</th><th>Model C LL / Brier</th></tr></thead><tbody>
+        <tr><th>32-team era · group phase</th><td>96</td><td>0.8971 / 0.5221</td><td>0.8880 / 0.5159</td><td>0.8975 / 0.5233</td></tr>
+        <tr><th>32-team era · knockout</th><td>29</td><td>0.9845 / 0.5778</td><td>0.9869 / 0.5809</td><td>0.9983 / 0.5886</td></tr>
+        <tr><th>36-team era · league phase</th><td>288</td><td>0.9195 / 0.5414</td><td>0.9245 / 0.5440</td><td>0.9175 / 0.5392</td></tr>
+        <tr><th>36-team era · knockout playoff</th><td>32</td><td>1.0169 / 0.6106</td><td>1.0262 / 0.6170</td><td>1.0155 / 0.6112</td></tr>
+        <tr><th>36-team era · other knockout</th><td>58</td><td>0.9684 / 0.5787</td><td>0.9663 / 0.5764</td><td>0.9691 / 0.5780</td></tr>
+      </tbody></table></div>
+      <p class="technical-note">The knockout samples of 29 and 32 matches are small. Differences are descriptive, have no uncertainty intervals, and do not establish that either phase is more predictable.</p>
+      <figure class="calibration-figure"><img src="assets/calibration_test.png" alt="One-vs-rest reliability diagrams comparing predicted probabilities with observed outcomes for home win, draw and away win on the final test"><figcaption>Final-test one-vs-rest calibration bins. The diagonal marks ideal calibration; bins are descriptive, have uneven support and no uncertainty intervals.</figcaption></figure>
     </section>
 
     <section class="chapter error-section" id="errors" aria-labelledby="errors-title">
       <div class="error-layout"><div><h2 id="errors-title">Class-wise errors show the draw blind spot.</h2><p>Across the 503-match final test, none of Models A, B or C assigned a draw the highest probability. Model C predicted 0 of the 87 actual draws as draws. This is a serious class-specific weakness, not a claim that all 503 predictions were wrong: the confusion matrix also records correct home and away predictions. Despite the draw weakness, all three models improve on the baseline in both primary aggregate metrics, log loss and Brier score.</p><div class="draw-stat"><strong>0 / 87</strong><span>Actual draws predicted as draws by Model C</span></div><div class="error-explanation"><h3>Why not rebalance the classes?</h3><p>Draws were 21.4% of training and 20.8% of validation. Balanced class weights produced 13 draw predictions and 5.8% draw recall, but worsened both primary metrics and accuracy, so they were not selected.</p></div></div><div class="confusion-wrap"><div class="confusion-heading"><h3>Model C · final-test confusion</h3><span>503 MATCHES</span></div><p class="matrix-key">Rows are actual outcomes. Columns are predicted outcomes.</p><table class="confusion-matrix"><thead><tr><th>Actual ↓ / predicted →</th><th>Home</th><th>Draw</th><th>Away</th></tr></thead><tbody><tr><th>Home</th><td>182</td><td>0</td><td>69</td></tr><tr><th>Draw</th><td>51</td><td class="miss">0</td><td>36</td></tr><tr><th>Away</th><td>54</td><td>0</td><td>111</td></tr></tbody></table><div class="matrix-foot"><span>Draw recall: 0 / 87</span><span>Not threshold-tuned</span></div></div></div>
+      <div class="table-wrap"><table class="results-table"><caption>Examples of confident Model C final-test errors; probabilities are home/draw/away</caption><thead><tr><th>Match and date</th><th>Actual 90-minute result</th><th>Predicted H / D / A</th><th>What went wrong</th></tr></thead><tbody>
+        <tr><th>Bayern Munich–Celtic · 2025-02-18</th><td>1–1 · Draw</td><td>0.841 / 0.096 / 0.062</td><td>High-confidence home-win prediction</td></tr>
+        <tr><th>Manchester City–Feyenoord · 2024-11-26</th><td>3–3 · Draw</td><td>0.836 / 0.104 / 0.060</td><td>High-confidence home-win prediction</td></tr>
+        <tr><th>Real Madrid–AC Milan · 2024-11-05</th><td>1–3 · Away win</td><td>0.800 / 0.113 / 0.087</td><td>Confidently assigned most probability to home win</td></tr>
+      </tbody></table></div>
+      <p class="technical-note">These selected examples illustrate the cost of confident errors; they do not explain their causes and are not a complete error sample.</p>
       <div class="class-analysis" aria-label="Three-class performance analysis">
         <div class="analysis-heading"><h3>Model C recall by actual outcome</h3><p>Recall is the share of each actual class correctly identified: diagonal count divided by its row total.</p></div>
         <div class="class-analysis-grid"><div id="model-c-recall-chart" class="class-recall-chart" aria-label="Model C final-test recall by outcome"></div><div class="distribution-panel"><h4>Actual and predicted class mix</h4><div id="model-c-distribution" class="distribution-comparison" aria-label="Actual and predicted class distribution"></div></div></div>
@@ -98,6 +116,13 @@
         <div class="analysis-heading"><h3>Supplementary Random Forest · validation only</h3><p>These three fixed forests are exploratory comparison rows on the 250-match validation set. They do not replace the selected logistic models or use final-test results.</p></div>
         <div class="rf-analysis-grid"><div id="rf-recall-chart" class="rf-recall-chart" aria-label="Random Forest validation recall by outcome"></div><div class="distribution-panel"><h4>Actual and predicted class mix</h4><div id="rf-distribution" class="distribution-comparison" aria-label="Random Forest validation class distributions"></div></div></div>
         <p id="rf-error-reading" class="class-error-reading"></p>
+        <div class="table-wrap"><table class="results-table"><caption>Supplementary validation probability scores and classification summaries</caption><thead><tr><th>System</th><th>Log loss ↓</th><th>Brier ↓</th><th>Accuracy</th><th>Macro F1</th><th>Draw recall</th></tr></thead><tbody>
+          <tr><th>Logistic Model C</th><td>0.9491</td><td>0.5599</td><td>0.5640</td><td>0.4153</td><td>0 / 52</td></tr>
+          <tr><th>Random Forest A</th><td>0.9525</td><td>0.5637</td><td>0.5520</td><td>0.4204</td><td>1 / 52</td></tr>
+          <tr><th>Random Forest B</th><td>0.9534</td><td>0.5647</td><td>0.5520</td><td>0.4099</td><td>0 / 52</td></tr>
+          <tr><th>Random Forest C</th><td>0.9574</td><td>0.5667</td><td>0.5440</td><td>0.4152</td><td>1 / 52</td></tr>
+        </tbody></table></div>
+        <p class="technical-note">RF A had the highest macro F1 and correctly classified 1 of 52 draws, but it did not improve either primary probability metric over Logistic Model C. This was a supplementary, validation-only comparison; Random Forest was not selected or evaluated on the final test.</p>
       </div>
       <div class="limits-strip"><h3>Read these results with their limits.</h3><p>Only one validation window and one final period were used. The final test crosses a competition-format change; no uncertainty intervals are available. The C = 0.003 choice followed validation, but an earlier C = 1 test run had already been viewed. Team histories are left-censored, and the unweighted models under-predict draws.</p></div>
     </section>
@@ -122,7 +147,7 @@
     </section>
 
     <section class="chapter conclusion-section" id="conclusion" aria-labelledby="conclusion-title">
-      <div class="conclusion-layout"><h2 id="conclusion-title">A better probability score does not guarantee a complete forecast.</h2><div><p>Feature additions improve on the class-frequency baseline in this saved comparison, while the three trained models are close on the final test. Draw handling remains a clear weakness. Results should be read alongside the chronological split, selection history and changing competition format.</p><div class="conclusion-links"><div><h3>Reproduce the study</h3><p>Use the Python project to rebuild the dataset, features, saved model comparisons and JSON/CSV frontend exports.</p><a href="#" id="repository-link" aria-disabled="true">Repository link not supplied <span aria-hidden="true">↗</span></a></div><div><h3>References</h3><div id="references-list" class="references-list"><a href="https://github.com/openfootball/champions-league" target="_blank" rel="noopener noreferrer">OpenFootball Champions League dataset</a><a href="https://openfootball.github.io/spec/" target="_blank" rel="noopener noreferrer">Football.TXT specification</a><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html" target="_blank" rel="noopener noreferrer">scikit-learn Logistic Regression</a><a href="https://www.uefa.com/uefachampionsleague/fixtures-results/" target="_blank" rel="noopener noreferrer">UEFA fixtures and results</a></div></div></div></div></div>
+      <div class="conclusion-layout"><h2 id="conclusion-title">A better probability score does not guarantee a complete forecast.</h2><div><p>Feature additions improve on the class-frequency baseline in this saved comparison, while the three trained models are close on the final test. Draw handling remains a clear weakness. Results should be read alongside the chronological split, selection history and changing competition format.</p><div class="conclusion-links"><div><h3>Reproduce the study</h3><p>Use the Python project to rebuild the dataset, features, saved model comparisons and JSON/CSV frontend exports. AI assistance is disclosed in the repository; the student remains responsible for understanding and verifying the work.</p><a href="https://github.com/raghav-iit/ucl-predictor" id="repository-link">Project repository <span aria-hidden="true">↗</span></a><p><a href="https://ml2026.floodresq.com/project-guide" target="_blank" rel="noopener noreferrer">ES 335 project requirements</a></p><p><a href="ai_use_disclosure.md">AI-use disclosure</a></p></div><div><h3>References</h3><div id="references-list" class="references-list"><a href="https://github.com/openfootball/champions-league" target="_blank" rel="noopener noreferrer">OpenFootball Champions League dataset</a><a href="https://openfootball.github.io/spec/" target="_blank" rel="noopener noreferrer">Football.TXT specification</a><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html" target="_blank" rel="noopener noreferrer">scikit-learn Logistic Regression</a><a href="https://www.uefa.com/uefachampionsleague/fixtures-results/" target="_blank" rel="noopener noreferrer">UEFA fixtures and results</a></div></div></div></div></div>
       <p class="project-credit">Raghav Verma</p>
     </section>
   </main>

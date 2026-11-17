@@ -1,61 +1,91 @@
 # UEFA Champions League Match Outcome Predictor
 
-An academic project studying which pre-match information improves probabilistic predictions of UEFA Champions League results. It continues the existing notebooks and environment, with added structured match-data preparation.
+An ES 335 project studying which pre-match information improves probabilistic UEFA Champions League match predictions. **Published site:** https://raghav-iit.github.io/ucl-predictor/ · **Repository:** https://github.com/raghav-iit/ucl-predictor
 
-## Proposed research direction
+## Research question and target
 
-The following question is a proposed refinement of the submitted proposal and has not been formally resubmitted:
+The following is a **proposed refinement** of the submitted proposal, not formally resubmitted:
 
 > To what extent do historical team performance, Elo-based strength ratings, recent form, and historical player attributes improve the probabilistic prediction of 90-minute UEFA Champions League match outcomes? In particular, do player-level features provide measurable improvements over team-level features, and does predictive performance differ between league-phase and knockout matches?
 
-The title remains UEFA Champions League Match Outcome Predictor. The primary target is home win, draw, or away win after 90 minutes. Extra time, penalties, aggregate score and advancement are kept separate for a future tournament-simulation component.
+Target: home win (H), draw (D), or away win (A) after 90 minutes. Extra time, penalties, aggregate scores and advancement are outside the classifier. One row represents one completed main-competition fixture with date, season/stage, teams, regulation goals and outcome; extra-time and shootout scores are separate.
 
-The planned feature sequence is the training-set outcome-frequency baseline; Model A (historical team performance); Model B (A + Elo); Model C (B + recent form); and optional Model D (C + time-safe historical FIFA/SoFIFA features). Model D is not implemented or evaluated. A supplementary one-configuration Random Forest validation comparison is documented separately and did not replace Models A/B/C. Comparisons use common chronological rows and primary metrics of log loss and multiclass Brier score.
+## Data and preparation
 
-## Current data and model status
+Preserved OpenFootball Champions League Football.TXT files in `data/raw/` cover 2015/16–2025/26. `data/processed/ucl_matches.csv` contains **1,497 matches**: 706 home wins, 298 draws and 493 away wins; qualifying rounds are excluded. The source manifest at `data/metadata/ucl_source_manifest.csv` records URLs, hashes, sizes, declared/parsed counts, team counts and date coverage.
 
-- Raw OpenFootball UCL match files are preserved in data/raw/.
-- 2015/16–2025/26 results parse to data/processed/ucl_matches.csv (1,497 matches).
-- Source URLs, hashes, header counts, parsed counts, team counts, and date coverage are in data/metadata/ucl_source_manifest.csv.
-- 03_exploratory_analysis.ipynb is an executed descriptive EDA notebook.
-- Date-safe feature generation and chronological evaluation for the baseline and Models A–C are implemented. Validation-only draw diagnostics and the selected common C=0.003 configuration are documented; results and probabilities are saved under data/results/. The initial C=1 run is preserved under data/results/initial_c1/.
-- A separate, supplementary Random Forest comparison was run only on the established 744-match training / 250-match validation split. It did not use the final-test set and did not alter the frozen A/B/C selection or outputs; see docs/random_forest_validation_experiment.md and reports/random_forest_validation/.
-- FIFA/SoFIFA player data was investigated but not joined to matches or included in any evaluated model; Model D has not been implemented or evaluated. The audited FIFA 15–23 legacy file has one snapshot per edition; the 5.6 GB all-updates file was not downloaded or audited, snapshot dates/club assignments do not establish UCL eligibility or lineup participation, and there is no consistent verified contemporaneous coverage across the final-test period. See docs/sofifa_research.md.
-- The official ES 335 evaluation rubric has now been supplied and audited in docs/rubric_gap_analysis.md. The separate submitted research proposal is not in the checkout, so its exact wording has not been reconciled.
+`src/parse_football_txt.py` parses score notation and stages; ambiguous regulation scores are not guessed and shootout goals are kept separate. Checks compare source-declared and parsed counts, duplicate fixture keys, missing outcomes and season date coverage. They do not independently verify every record against UEFA. Team identities use a reviewed project alias map, not official IDs. See [data preparation](docs/data_preparation.md), [executed EDA](03_exploratory_analysis.ipynb) and [references](docs/references.md).
 
-## Reproduce
+## Features and models
 
-From the project root in WSL with Python 3.12:
+`src/build_features.py` builds date-ordered histories. All fixtures on the same date use state from before that date, and results are applied only after feature rows for that date are built. Only earlier 90-minute outcomes are used. Histories start in 2015/16 and are left-censored.
+
+- **Baseline:** training-period H/D/A outcome frequencies.
+- **Model A:** historical counts, points, goals for/against/difference per match, win/draw rates and venue-specific rates.
+- **Model B:** A plus Elo difference (initial 1500, K=24, fixed +60 home adjustment).
+- **Model C:** B plus points and goal-difference averages over each team's latest up to five earlier UCL matches.
+
+A–C use median imputation, standard scaling and regularized multinomial Logistic Regression (`lbfgs`, L2, common `C=0.003`, `max_iter=2000`, seed 335). Preprocessing is fitted inside each training pipeline. C was selected on validation and shared across A–C. Logistic Regression provides a common regularized probability model for controlled comparisons, not a claim of universal optimality.
+
+FIFA/SoFIFA data were investigated but **not included in evaluated models**. Model D is unimplemented because the available snapshots do not establish consistent pre-match dates, historical club/registration or starting lineups. Squad membership is not match participation. A fixed-configuration Random Forest was a supplementary validation-only experiment, not a replacement for A/B/C; see [RF report](docs/random_forest_validation_experiment.md) and [SoFIFA research](docs/sofifa_research.md).
+
+## Chronological evaluation and results
+
+| Period | Seasons | n | Purpose |
+|---|---|---:|---|
+| Train | 2015/16–2020/21 | 744 | Fit |
+| Validation | 2021/22–2022/23 | 250 | Select regularization |
+| Final test | 2023/24–2025/26 | 503 | Frozen comparison |
+
+Models share evaluation rows. Primary metrics are multiclass log loss and Brier score (lower is better) because the task is probabilistic. Accuracy, macro F1, class precision/recall, confusion matrices and one-vs-rest calibration are secondary.
+
+| Period | System | Log loss | Brier | Accuracy | Macro F1 |
+|---|---|---:|---:|---:|---:|
+| Validation | Baseline | 1.0475 | 0.6330 | 0.4680 | 0.2125 |
+| Validation | A | 0.9620 | 0.5685 | 0.5520 | 0.4072 |
+| Validation | B | 0.9578 | 0.5661 | 0.5600 | 0.4128 |
+| Validation | C | 0.9491 | 0.5599 | 0.5640 | 0.4153 |
+| Final test | Baseline | 1.0217 | 0.6167 | 0.4990 | 0.2219 |
+| Final test | A | 0.9308 | 0.5485 | 0.5865 | 0.4224 |
+| Final test | B | 0.9324 | 0.5492 | 0.5825 | 0.4199 |
+| Final test | C | 0.9306 | 0.5481 | 0.5825 | 0.4198 |
+
+All A/B/C models had **zero draw recall** on the final test: Model C classified 0 of 87 draws as the argmax. Small score differences have no uncertainty intervals. The final test spans the 2024/25 format change, and phase comparisons are descriptive, especially for small knockout samples. Final-test results had previously been inspected under C=1 before C=0.003 was selected using validation. The test was not used for that new selection, but is **not historically untouched**. Do not use it for further model selection.
+
+Supplementary RF A had the highest validation macro F1 (0.4204) and classified 1/52 draws, but log loss (0.9525) and Brier (0.5637) were worse than Logistic Model C (0.9491, 0.5599); it was not selected. Details, representative errors and calibration are in [model results](docs/model_results.md) and [draw diagnosis](docs/model_c_draw_diagnosis.md).
+
+The site’s historical explorer shows saved retrospective final-test predictions. Separate manual inference estimates a user-entered pairing from saved parameters/state through 2026-05-30. It does not verify a fixture, use live data or include a 2026/27 feed.
+
+## Setup and reproduction
+
+Developed in WSL with Python 3.12. From the repository root:
 
 ```bash
 python3.12 -m venv .venv
-.venv/bin/pip install -r requirements.txt
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip check
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+To rebuild the primary data/model outputs:
+
+```bash
 .venv/bin/python src/parse_football_txt.py
 .venv/bin/python src/build_features.py
 .venv/bin/python src/diagnose_model_c_draws.py
 .venv/bin/python src/evaluate_models.py --logistic-c 0.003
-.venv/bin/python src/evaluate_random_forest_validation.py  # optional supplementary validation-only experiment
 .venv/bin/python src/export_prediction_models.py
-.venv/bin/python -m unittest discover -s tests
-.venv/bin/streamlit run app.py
 ```
 
-The submission website is the static GitHub Pages-compatible site in `docs/`. To refresh its saved evidence and preview it without publishing:
+Optional, supplementary validation-only RF experiment: `.venv/bin/python src/evaluate_random_forest_validation.py`.
 
-```bash
-.venv/bin/python src/build_pages_assets.py
-.venv/bin/python src/export_historical_match_centre.py
-cp data/exports/historical_match_centre.json docs/site_data/historical_match_centre.json
-.venv/bin/python -m http.server 8765 --directory docs
-```
+Rebuild scripts write derived files under `data/processed/`, `data/results/`, `data/models/` and `reports/`. Back up frozen artifacts or use a fresh copy. Do not run the evaluator just to view saved results. Split assignments, configuration, predictions and metrics are in `data/metadata/` and `data/results/`.
 
-Open `http://localhost:8765/`. The site runs the saved A/B/C inference parameters in browser JavaScript; it does not require Streamlit at runtime. See `docs/github_pages.md` for the Pages setup. The verified public repository is https://github.com/raghav-iit/ucl-predictor and is configured as this checkout origin; the project files have not been committed or pushed, and GitHub Pages has not been published. The pinned `requirements.txt` is a full environment snapshot for the notebooks and app, not a minimal runtime list; the current environment passes `pip check`, but a clean reinstall has not been verified.
+Run the Streamlit application: `.venv/bin/python -m streamlit run app.py`. The published GitHub Pages site is a separate static HTML/CSS/JavaScript application under `docs/`; Pages does not run the Streamlit server. Preview the static site with `.venv/bin/python -m http.server 8765 --directory docs`, then open http://localhost:8765/. Export-refresh details are in [docs/github_pages.md](docs/github_pages.md). The pinned requirements describe the full notebook/app environment; a clean installation has not been independently verified.
 
-The parser, feature builder, evaluator, model exporter and static-data exporter regenerate files under `data/processed/`, `data/results/`, `data/models/`, `reports/` and `docs/site_data/`. Reproduce in a fresh project copy or back up the saved submission artifacts first; do not use the frozen submission checkout as a scratch output directory.
+## Limitations, references and AI use
 
-See `docs/data_preparation.md` for parsing and coverage; `docs/research_design.md` for the proposed experiment; `docs/model_methodology.md` for feature timing and splits; `docs/model_results.md` for evaluation; `docs/fixture_prediction.md` for manual inference and fixture-source limitations; `docs/project_technical_walkthrough.md` for a code-oriented study guide; `docs/sofifa_research.md` for player-data source findings; `docs/model_c_draw_diagnosis.md` for validation-only diagnosis; `docs/rubric_gap_analysis.md` for criterion-by-criterion evidence; `docs/ai_use_disclosure.md` for AI use; `docs/defense_preparation.md` for student practice; and `docs/references.md` for citations.
+There are no implemented 2026/27 results or automated upcoming fixtures. Other limitations include weak draw classification, left-censored histories, heuristic aliases, competition-format change, no uncertainty intervals, and prior C=1 final-test exposure. See [methodology](docs/model_methodology.md), [technical walkthrough](docs/project_technical_walkthrough.md), [rubric audit](docs/rubric_gap_analysis.md) and [defense preparation](docs/defense_preparation.md).
 
-## Remaining work
-
-The project retains a Streamlit application and a static GitHub Pages-compatible research site in `docs/`. The historical error explorer displays saved final-test predictions from the frozen evaluation outputs; these are retrospective and not live forecasts. Those historical predictions use match-specific pre-match feature rows, not the latest team-state snapshot. The separate manual fixture form runs saved A/B/C pipelines for a user-entered team/date scenario; only this future-scenario path uses the team-state snapshot ending 2026-05-30, and it does not verify that a fixture is scheduled. Neither path uses live 2026/27 results or an automated upcoming-fixture feed. Current-season results, transfers, roster changes, injuries and lineups are absent. The final-test results had previously been viewed under C=1 and are not a pristine untouched holdout. The site was tested locally but has not been published. FIFA/SoFIFA ratings were investigated but not incorporated; Model D remains unimplemented because player-data dates, coverage, club mappings and lineup evidence are insufficient for a fair time-safe evaluation.
+Sources: [OpenFootball match data](https://github.com/openfootball/champions-league), [Football.TXT specification](https://openfootball.github.io/spec/), [scikit-learn Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), and the [official ES 335 project guide](https://ml2026.floodresq.com/project-guide). More citations are in [docs/references.md](docs/references.md). AI assistance is disclosed in [docs/ai_use_disclosure.md](docs/ai_use_disclosure.md); the student must add any additional tools used outside the documented work and independently explain the implementation.
 
