@@ -11,7 +11,7 @@ Log loss penalizes low probability assigned to the observed class, with especial
 | Period | Model | n | Log loss | Multiclass Brier | Accuracy | Macro F1 |
 |---|---|---:|---:|---:|---:|---:|
 | Validation | Frequency baseline | 250 | 1.0475 | 0.6330 | 0.4680 | 0.2125 |
-| Validation | Model A | 250 | 0.9620 | 0.5685 | 0.5520 | 0.4072 |
+| Validation | Model A | 250 | 0.9620 | 0.5685 | 0.5520 | 0.4071 |
 | Validation | Model B | 250 | 0.9578 | 0.5661 | 0.5600 | 0.4128 |
 | Validation | Model C | 250 | 0.9491 | 0.5599 | 0.5640 | 0.4153 |
 | Final test | Frequency baseline | 503 | 1.0217 | 0.6167 | 0.4990 | 0.2219 |

@@ -279,7 +279,7 @@ Current selected C=0.003 aggregate scores:
 | Period | Model | n | Log loss | Multiclass Brier | Accuracy | Macro F1 |
 |---|---|---:|---:|---:|---:|---:|
 | Validation | Baseline | 250 | 1.0475 | 0.6330 | 0.4680 | 0.2125 |
-| Validation | A | 250 | 0.9620 | 0.5685 | 0.5520 | 0.4072 |
+| Validation | A | 250 | 0.9620 | 0.5685 | 0.5520 | 0.4071 |
 | Validation | B | 250 | 0.9578 | 0.5661 | 0.5600 | 0.4128 |
 | Validation | C | 250 | 0.9491 | 0.5599 | 0.5640 | 0.4153 |
 | Final test | Baseline | 503 | 1.0217 | 0.6167 | 0.4990 | 0.2219 |

@@ -24,7 +24,7 @@ All rows below are the same 250 validation matches. Lower is better for log loss
 | Model | Feature set | Log loss | Multiclass Brier | Accuracy | Macro F1 | Draw recall |
 |---|---|---:|---:|---:|---:|---:|
 | Baseline | Training outcome frequencies | 1.0475 | 0.6330 | 0.4680 | 0.2125 | 0.0000 |
-| Model A | Historical team performance | 0.9620 | 0.5685 | 0.5520 | 0.4072 | 0.0000 |
+| Model A | Historical team performance | 0.9620 | 0.5685 | 0.5520 | 0.4071 | 0.0000 |
 | Model B | A + Elo difference | 0.9578 | 0.5661 | 0.5600 | 0.4128 | 0.0000 |
 | Model C | B + recent form | **0.9491** | **0.5599** | **0.5640** | 0.4153 | 0.0000 |
 | Random Forest A | A features | 0.9525 | 0.5637 | 0.5520 | **0.4204** | 0.0192 |

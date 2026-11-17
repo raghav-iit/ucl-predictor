@@ -4,6 +4,7 @@
 @media(max-width:420px){.hero h1{font-size:2.4rem}.hero-actions{align-items:stretch}.button{flex:1;gap:8px;padding:0 10px}.hero-bottom span:first-child{max-width:100px}.result-controls{grid-template-columns:1fr}.result-controls label:nth-of-type(2){margin-top:5px}.fixture-controls{grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr)}.team-select-row{gap:6px}.club-crest{width:31px;height:31px}.team-picker select{padding-left:7px;padding-right:4px;font-size:11px}.confusion-heading{align-items:start;flex-direction:column;gap:4px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.js .reveal-pending{opacity:1;transform:none}}
 .section-index a{width:30px;height:30px;font-size:12px}
+.reproduction-commands{overflow-x:auto;margin:0;padding:22px 24px;background:#07162b;border-top:1px solid #31557c;border-bottom:1px solid var(--line);color:#d7e8fb;font:12px/1.85 ui-monospace,SFMono-Regular,Consolas,monospace}.reproduction-section .technical-note code{color:#d7e8fb}.limits-grid{margin-top:0}
 @media(max-width:720px){.section-index{display:flex;top:auto;bottom:10px;left:50%;right:auto;transform:translateX(-50%);gap:3px;padding:5px;background:rgba(5,16,33,.96);border:1px solid var(--line);border-radius:24px}.section-index a{width:25px;height:25px;font-size:9px}}
 
 /* Keep the full visual identity in browser print and Save as PDF. */

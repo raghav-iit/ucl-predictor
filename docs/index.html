@@ -57,7 +57,7 @@
     </section>
 
     <section class="chapter features-section" id="features" aria-labelledby="features-title">
-      <div class="chapter-head"><h2 id="features-title">Only earlier matches inform a prediction.</h2><p>State is updated chronologically from 90-minute outcomes. Every fixture on the same date uses state from before that date; results are added only after all same-day feature rows are built.</p></div>
+      <div class="chapter-head"><h2 id="features-title">Preprocessing keeps every input before kickoff.</h2><p>State is updated chronologically from 90-minute outcomes. Every fixture on the same date uses state from before that date; results are added only after all same-day feature rows are built.</p></div>
       <div class="feature-ledger">
         <div class="ledger-head"><span>FEATURE SET</span><span>INFORMATION ADDED</span><span>PRE-MATCH RULE</span></div>
         <div class="ledger-row"><strong><b>A</b> Team history</strong><p>Prior match counts; points, goals for/against, goal difference, win/draw rates per match; home-at-home and away-away rates.</p><p>Matches dated earlier than the fixture.</p></div>
@@ -69,7 +69,7 @@
     </section>
 
     <section class="chapter models-section" id="models" aria-labelledby="models-title">
-      <div class="chapter-head"><h2 id="models-title">Add signal in controlled steps.</h2><p>One regularized multinomial Logistic Regression family and one common scoring protocol. Each model adds a feature group so its contribution can be compared.</p></div>
+      <div class="chapter-head"><h2 id="models-title">Baseline and models add signal in controlled steps.</h2><p>One regularized multinomial Logistic Regression family and one common scoring protocol. Each model adds a feature group so its contribution can be compared.</p></div>
       <div class="model-compare" id="model-cards"></div>
       <div class="model-method"><span>SHARED PIPELINE</span><p>Median imputation → standard scaling → Logistic Regression (lbfgs, L2), C = 0.003, max_iter = 2,000, seed 335. C was selected on validation and applied consistently. An earlier C = 1 run had already exposed final-test results; interpret the final comparison cautiously.</p></div>
       <p class="technical-note">The class-frequency baseline is a simple reference. Multinomial Logistic Regression gives comparable H/D/A probabilities while allowing regularized additive effects on class log-odds; it is a practical probability model, not assumed to be universally best. FIFA/SoFIFA ratings were investigated but excluded: dates, club membership and lineup evidence do not support a consistent time-safe player panel. Squad membership is not treated as match participation, and Model D has not been evaluated.</p>
@@ -124,7 +124,11 @@
         </tbody></table></div>
         <p class="technical-note">RF A had the highest macro F1 and correctly classified 1 of 52 draws, but it did not improve either primary probability metric over Logistic Model C. This was a supplementary, validation-only comparison; Random Forest was not selected or evaluated on the final test.</p>
       </div>
-      <div class="limits-strip"><h3>Read these results with their limits.</h3><p>Only one validation window and one final period were used. The final test crosses a competition-format change; no uncertainty intervals are available. The C = 0.003 choice followed validation, but an earlier C = 1 test run had already been viewed. Team histories are left-censored, and the unweighted models under-predict draws.</p></div>
+    </section>
+
+    <section class="chapter limitations-section" id="limitations" aria-labelledby="limitations-title">
+      <div class="chapter-head"><h2 id="limitations-title">Limitations shape how these scores should be read.</h2><p>The results describe this dataset and these evaluation windows. They do not establish a universal match-prediction advantage.</p></div>
+      <div class="guardrails limits-grid"><div><b>Data coverage</b><span>OpenFootball counts were checked internally, not independently against every UEFA match. Histories begin in 2015/16 and team aliases are project-derived.</span></div><div><b>Evaluation scope</b><span>There is one validation window and one final period, no uncertainty intervals, and small knockout samples. An earlier C=1 final-test run had been viewed before C=0.003 was selected on validation, so the test is not historically untouched. The 2024/25 format changed the competition structure.</span></div><div><b>Draw weakness</b><span>Model C has 0/87 final-test draw recall by argmax. Draw probabilities are non-zero; they simply never rank first. Class weighting hurt primary scores.</span></div><div><b>Unimplemented inputs</b><span>FIFA/SoFIFA ratings were excluded; 2026/27 results and an automated fixture feed are absent. Manual estimates do not validate official fixtures.</span></div></div>
     </section>
 
     <section class="predictor-section" id="predictor" aria-labelledby="predictor-title">
@@ -149,6 +153,20 @@
     <section class="chapter conclusion-section" id="conclusion" aria-labelledby="conclusion-title">
       <div class="conclusion-layout"><h2 id="conclusion-title">A better probability score does not guarantee a complete forecast.</h2><div><p>Feature additions improve on the class-frequency baseline in this saved comparison, while the three trained models are close on the final test. Draw handling remains a clear weakness. Results should be read alongside the chronological split, selection history and changing competition format.</p><div class="conclusion-links"><div><h3>Reproduce the study</h3><p>Use the Python project to rebuild the dataset, features, saved model comparisons and JSON/CSV frontend exports. AI assistance is disclosed in the repository; the student remains responsible for understanding and verifying the work.</p><a href="https://github.com/raghav-iit/ucl-predictor" id="repository-link">Project repository <span aria-hidden="true">↗</span></a><p><a href="https://ml2026.floodresq.com/project-guide" target="_blank" rel="noopener noreferrer">ES 335 project requirements</a></p><p><a href="ai_use_disclosure.md">AI-use disclosure</a></p></div><div><h3>References</h3><div id="references-list" class="references-list"><a href="https://github.com/openfootball/champions-league" target="_blank" rel="noopener noreferrer">OpenFootball Champions League dataset</a><a href="https://openfootball.github.io/spec/" target="_blank" rel="noopener noreferrer">Football.TXT specification</a><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html" target="_blank" rel="noopener noreferrer">scikit-learn Logistic Regression</a><a href="https://www.uefa.com/uefachampionsleague/fixtures-results/" target="_blank" rel="noopener noreferrer">UEFA fixtures and results</a></div></div></div></div></div>
       <p class="project-credit">Raghav Verma</p>
+    </section>
+
+    <section class="chapter reproduction-section" id="reproduction" aria-labelledby="reproduction-title">
+      <div class="chapter-head"><h2 id="reproduction-title">Reproduce the project from a clean copy.</h2><p>These commands assume Linux/WSL, Python 3.12, and the repository root. Rebuild scripts overwrite derived outputs; use a fresh clone or back up frozen files first.</p></div>
+      <pre class="reproduction-commands"><code>python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip check
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python src/parse_football_txt.py
+.venv/bin/python src/build_features.py
+.venv/bin/python src/diagnose_model_c_draws.py
+.venv/bin/python src/evaluate_models.py --logistic-c 0.003
+.venv/bin/python src/export_prediction_models.py</code></pre>
+      <p class="technical-note">For the Streamlit app, run <code>.venv/bin/python -m streamlit run app.py</code>. Full setup, reproduction cautions, results, references and AI-use disclosure are in the <a href="https://github.com/raghav-iit/ucl-predictor/blob/main/README.md">README</a> and <a href="https://github.com/raghav-iit/ucl-predictor/blob/main/docs/ai_use_disclosure.md">AI-use disclosure</a>.</p>
     </section>
   </main>
   <footer class="site-footer"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">★</span><span>ES 335 <i>·</i> IITGN</span></a><span>Football outcomes, examined through data.</span><a href="#top">BACK TO TOP ↑</a></footer>

@@ -8,6 +8,27 @@ The project compares probabilistic 90-minute home/draw/away predictions using Op
 
 Rewrite this in your own words and ensure it matches the final project state.
 
+## Decisions to explain in your own words
+
+These are evidence-based answer outlines, not a script to claim without understanding.
+
+- **Why OpenFootball?** The project uses its season-by-season Football.TXT match files because they provide structured historical main-competition results that can be preserved, parsed and checked reproducibly. Parsed counts agree with the source headers, but that does not independently prove every fixture is complete or correct against UEFA.
+- **Why the 90-minute target?** The prediction target is H/D/A after regulation. Extra time, shootouts, aggregate score and advancement are different outcomes and are stored or handled separately so they cannot silently change the match label.
+- **Why Elo?** Elo adds a compact, time-updated relative-strength signal from earlier results. The implementation starts teams at 1500, uses K=24 and a fixed +60 home adjustment. These are fixed design choices, not values established as optimal by a broad parameter search.
+- **Why recent form?** Model C adds points and goal-difference averages from each team's latest up to five earlier UCL matches. It represents shorter-term performance, but a short window can be noisy; the saved final-test comparison does not establish a large, robust gain over A.
+- **Why Logistic Regression?** The regularized multinomial model gives H/D/A probabilities and a common, relatively simple model family for controlled A/B/C feature increments on a 1,497-match dataset. Median imputation and scaling live inside the training pipeline. It is a justified comparison method, not asserted to be universally best.
+- **Why chronological splits?** Train/validation/test use later seasons than the preceding period, reflecting the intended forecasting direction. Training-only fitted preprocessing and pre-date features avoid learning from future matches. This is one split design, not repeated rolling-origin evidence.
+- **Why log loss and Brier?** The research asks about probability quality. Both penalize inaccurate probability distributions; log loss particularly punishes assigning very little probability to the observed class, while multiclass Brier sums squared H/D/A probability errors. Accuracy and F1 only summarize hard class decisions and are secondary.
+- **What does zero draw recall mean?** Model C classified 0 of 87 actual final-test draws as the top-probability class. This does not mean its draw probabilities were zero: the saved mean draw probability is 0.191. The hard decision failed to choose D even though the model assigned it probability mass.
+
+### A concrete method change and its trade-off
+
+During the validation-only draw diagnosis, balanced class weights were tested for Model C at C=0.003. They produced 13 draw predictions and draw recall of 5.8% (3/52), but log loss rose from 0.9491 to 0.9811, multiclass Brier from 0.5599 to 0.5824, and accuracy fell from 0.564 to 0.540. The unweighted model was retained because the primary probability metrics worsened. This is a specific example of testing a plausible change and rejecting it on the stated objective; it is not a final-test-based decision.
+
+### Individual contribution and AI assistance
+
+The public project credits Raghav Verma, and the repository contains the submitted project plus a later documentation/site commit. Repository files and commit history demonstrate project artifacts and changes, but they do not establish task-level authorship, contribution percentages, or what any individual personally implemented. Before the defense, write a truthful first-person account of the parts you personally designed, coded, checked, and can explain. Use `docs/ai_use_disclosure.md` to disclose Codex assistance and add any other tools or assistance actually used. Do not claim sole authorship of AI-assisted work or present this study guide as proof of personal understanding.
+
 ## Walkthrough to practice
 
 1. Open website Overview and explain the question, proposed status and 90-minute target.

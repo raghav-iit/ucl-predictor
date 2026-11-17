@@ -42,7 +42,7 @@ Models share evaluation rows. Primary metrics are multiclass log loss and Brier 
 | Period | System | Log loss | Brier | Accuracy | Macro F1 |
 |---|---|---:|---:|---:|---:|
 | Validation | Baseline | 1.0475 | 0.6330 | 0.4680 | 0.2125 |
-| Validation | A | 0.9620 | 0.5685 | 0.5520 | 0.4072 |
+| Validation | A | 0.9620 | 0.5685 | 0.5520 | 0.4071 |
 | Validation | B | 0.9578 | 0.5661 | 0.5600 | 0.4128 |
 | Validation | C | 0.9491 | 0.5599 | 0.5640 | 0.4153 |
 | Final test | Baseline | 1.0217 | 0.6167 | 0.4990 | 0.2219 |
